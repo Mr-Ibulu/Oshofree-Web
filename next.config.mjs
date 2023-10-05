@@ -12,7 +12,8 @@ const nextConfig = {
       },
     ],
   },
-  // basePath: "",
+  basePath: "",
+  assetPrefix: './',
 };
 
 // module.exports = nextConfig;
