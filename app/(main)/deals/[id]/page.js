@@ -13,6 +13,10 @@ import FadeInFromSides from "@/components/animations/FadeInFromSides";
 import SearchbarHeader from "@/components/ui/searchbarHeader";
 import DealActions from "@/components/dealPage/DealActions";
 
+export function generateStaticParams() {
+  return dealOfTheDay.map((deal) => ({ id: `${deal.id}` }));
+}
+
 const DealItem = ({ params }) => {
   const productId = params.id;
   const deal = dealOfTheDay.find((deal) => deal.id == productId);
