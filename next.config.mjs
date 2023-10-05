@@ -12,7 +12,7 @@ const nextConfig = {
       },
     ],
   },
-  basePath: "",
+  basePath: "/Oshofree-Web",
 };
 
 // module.exports = nextConfig;
