@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { AiOutlineRight } from "react-icons/ai";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import FadeInFromSides from "@/components/animations/FadeInFromSides";
 import { findSubCategories } from "@/lib/utils";
 
 const CategoryList = ({ rootCategory }) => {
@@ -26,7 +25,11 @@ const CategoryList = ({ rootCategory }) => {
             <AccordionItem value="subcategories">
               <AccordionTrigger className="sm:text-lg font-bold">{subCat.title}</AccordionTrigger>
               <AccordionContent>
-                <Link href={`${rootCategory.slug}/${subCat.slug}`} key={subCat.title} className="block font-semibold sm:text-lg py-1 my-2">
+                <Link
+                  href={rootCategory.slug === "highlight" ? "" : `${rootCategory.slug}/${subCat.slug}`}
+                  key={subCat.title}
+                  className="block font-semibold sm:text-lg py-1 my-2"
+                >
                   All {subCat.title} Deals
                 </Link>
                 {findSubCategories(subCat).map((innerCat) => (

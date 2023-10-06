@@ -75,7 +75,7 @@ const Cart = () => {
                           <div className="old-price line-through text-gray-500 font-medium text-sm">
                             <span>&#8358;{cartItem.deal.prevPrice}</span>
                           </div>
-                          <div className="new-price font-bold text-lg text-red-500">
+                          <div className="new-price font-bold text-lg text-red-600">
                             <span>&#8358;{cartItem.deal.newPrice}</span>
                           </div>
                         </div>

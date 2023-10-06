@@ -23,7 +23,7 @@ const CategoryCardCollection = ({ rootCategory }) => {
 
       {findSubCategories(rootCategory).map((item) => (
         // <FadeInFromZoom reapeat={true} initialScale={1.5} duration={0.2} key={item.title}>
-        <Link href={`${rootCategory.slug}/${item.slug}`} key={item.title} scroll={false}>
+        <Link href={rootCategory.slug === "highlight" ? "" : `${rootCategory.slug}/${item.slug}`} key={item.title} scroll={false}>
           <div className="h-24 sm:h-32 xl:h-36 shadow-md rounded-lg relative overflow-hidden flex transition-transform duration-200 delay-75 ease-in-out hover:-translate-y-2">
             <ImageWithPlaceholder src={item.image} alt={item.title} fill={true} sizes={"20vw"} className={"object-cover"} />
           </div>

@@ -20,10 +20,10 @@ const DealActions = ({ dealItem }) => {
                 <div className="old-price line-through text-gray-500 font-light text-sm">
                   <span>&#8358;{dealItem.prevPrice}</span>
                 </div>
-                <div className="new-price font-bold text-xl text-red-500">
+                <div className="new-price font-bold text-xl text-red-600">
                   <span>&#8358;{dealItem.newPrice}</span>
                 </div>
-                <div className="border text-sm bg-red-200 text-red-500 rounded-lg px-2">
+                <div className="border text-sm bg-red-200 text-red-600 rounded-lg px-2">
                   <span>{Math.trunc(((dealItem.newPrice - dealItem.prevPrice) * 100) / dealItem.prevPrice)}%</span>
                 </div>
               </div>
@@ -41,10 +41,10 @@ const DealActions = ({ dealItem }) => {
                 <div className="old-price line-through text-gray-500 font-light text-sm">
                   <span>&#8358;{dealItem.prevPrice}</span>
                 </div>
-                <div className="new-price font-bold text-xl text-red-500">
+                <div className="new-price font-bold text-xl text-red-600">
                   <span>&#8358;{dealItem.newPrice}</span>
                 </div>
-                <div className="border text-sm bg-red-200 text-red-500 rounded-lg px-2">
+                <div className="border text-sm bg-red-200 text-red-600 rounded-lg px-2">
                   <span>{Math.trunc(((dealItem.newPrice - dealItem.prevPrice) * 100) / dealItem.prevPrice)}%</span>
                 </div>
               </div>
@@ -62,10 +62,10 @@ const DealActions = ({ dealItem }) => {
                 <div className="old-price line-through text-gray-500 font-light text-sm">
                   <span>&#8358;{dealItem.prevPrice}</span>
                 </div>
-                <div className="new-price font-bold text-xl text-red-500">
+                <div className="new-price font-bold text-xl text-red-600">
                   <span>&#8358;{dealItem.newPrice}</span>
                 </div>
-                <div className="border text-sm bg-red-200 text-red-500 rounded-lg px-2">
+                <div className="border text-sm bg-red-200 text-red-600 rounded-lg px-2">
                   <span>{Math.trunc(((dealItem.newPrice - dealItem.prevPrice) * 100) / dealItem.prevPrice)}%</span>
                 </div>
               </div>
