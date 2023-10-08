@@ -41,7 +41,7 @@ const DealCard = ({ image, isNew, rating, description, prevPrice, newPrice, clas
             <p className="leading-[1.4rem]">{description}</p>
           </div>
           <div className="flex gap-4 items-center">
-            <div className="old-price line-through text-gray-500 font-light text-sm">
+            <div className="old-price line-through text-gray-500">
               <span>&#8358;{prevPrice}</span>
             </div>
             <div className="new-price font-bold text-xl text-red-600">

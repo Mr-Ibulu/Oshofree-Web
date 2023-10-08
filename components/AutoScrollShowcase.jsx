@@ -140,11 +140,11 @@ const AutoScrollShowcase = ({ scroll = true, horizontal = true, className, child
         {!horizontal && (
           <div className="flex justify-center">
             <button
-              onMouseDown={() => {
+              onPointerDown={() => {
                 skipBackward();
               }}
               onMouseUp={() => skipButtonReleased()}
-              className="rounded-full focus:outline-none shadow active:shadow-sm hover:scale-125 transition-transform duration-200 ease-in-out"
+              className="rounded-full focus:outline-none shadow active:shadow-sm hover:scale-125 transition-transform duration-200 ease-in-out active:scale-95"
             >
               <MdKeyboardArrowUp className="text-4xl text-red-500" />
             </button>
@@ -156,11 +156,11 @@ const AutoScrollShowcase = ({ scroll = true, horizontal = true, className, child
         {!horizontal && (
           <div className="flex justify-center">
             <button
-              onMouseDown={() => {
+              onPointerDown={() => {
                 skipFoward();
               }}
               onMouseUp={() => skipButtonReleased()}
-              className="rounded-full focus:outline-none shadow active:shadow-sm hover:scale-125 transition-transform duration-200 ease-in-out"
+              className="rounded-full focus:outline-none shadow active:shadow-sm hover:scale-125 transition-transform duration-200 ease-in-out active:scale-95"
             >
               <MdKeyboardArrowDown className="text-4xl text-red-500" />
             </button>
@@ -170,8 +170,8 @@ const AutoScrollShowcase = ({ scroll = true, horizontal = true, className, child
       {horizontal ? (
         <div className="hidden xl:flex justify-center gap-7">
           <button
-            className="rounded-full focus:outline-none shadow active:shadow-sm hover:scale-125 transition-transform duration-200 ease-in-out"
-            onMouseDown={() => {
+            className="rounded-full focus:outline-none shadow active:shadow-sm hover:scale-125 transition-transform duration-200 ease-in-out active:scale-95"
+            onPointerDown={() => {
               skipBackward();
             }}
             onMouseUp={() => skipButtonReleased()}
@@ -179,8 +179,8 @@ const AutoScrollShowcase = ({ scroll = true, horizontal = true, className, child
             <MdNavigateBefore className="text-4xl text-red-500" />
           </button>
           <button
-            className="rounded-full focus:outline-none shadow active:shadow-sm hover:scale-125 transition-transform duration-200 ease-in-out"
-            onMouseDown={() => {
+            className="rounded-full focus:outline-none shadow active:shadow-sm hover:scale-125 transition-transform duration-200 ease-in-out active:scale-95"
+            onPointerDown={() => {
               skipFoward();
             }}
             onMouseUp={() => skipButtonReleased()}

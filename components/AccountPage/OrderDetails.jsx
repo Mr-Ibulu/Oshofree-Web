@@ -45,7 +45,7 @@ const OrderDetails = ({ order }) => {
                 <span className="min-w-fit inline-flex items-center">Service Code</span>
                 <span
                   className={`font-extrabold text-end block p-3 border-2 border-dashed text-xl tracking-wider border-red-500 ${
-                    order.status === "pending" ? "" : "line-through"
+                    order.status === "pending" ? "" : "line-through decoration-[3px]"
                   }`}
                 >
                   {order.code}
