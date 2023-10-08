@@ -1,5 +1,5 @@
 import React from "react";
-import DeliveryInfoForm from "@/components/AccountPage/DeliveryInfoForm";
+import DeliveryInfoForm from "@/components/UserAccountPage/DeliveryInfoForm";
 
 const DeliveryInformation = () => {
   return (

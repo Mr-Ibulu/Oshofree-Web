@@ -1,5 +1,5 @@
 import React from "react";
-import EmailPreferenceForm from "@/components/AccountPage/EmailPreferenceForm";
+import EmailPreferenceForm from "@/components/UserAccountPage/EmailPreferenceForm";
 
 const EmailPreferences = () => {
   return (

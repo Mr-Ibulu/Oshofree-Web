@@ -9,8 +9,8 @@ import {
   MdOutlinePersonOff,
   MdOutlineShoppingBag,
 } from "react-icons/md";
-import NavigationLink from "@/components/AccountPage/NavigationLink";
-import TopNavigationHead from "@/components/AccountPage/TopNavigationHead";
+import NavigationLink from "@/components/UserAccountPage/NavigationLink";
+import TopNavigationHead from "@/components/UserAccountPage/TopNavigationHead";
 
 const navigationLinkGroups = [
   {
@@ -66,7 +66,7 @@ const AccountInfoLayout = ({ children }) => {
         </FadeInFromSides>
         <div className="flex flex-col md:flex-row gap-5 min-h-[650px]">
           <FadeInFromSides duration={0.7} yOffset={20} viewportAmount={0} delay={0.3} className=" md:hidden">
-            <TopNavigationHead navGroups={navigationLinkGroups}/>
+            <TopNavigationHead navGroups={navigationLinkGroups} />
           </FadeInFromSides>
           <FadeInFromSides
             duration={0.7}

@@ -1,5 +1,5 @@
 import React from "react";
-import AccountInfoForm from "@/components/AccountPage/AccountInfoForm";
+import AccountInfoForm from "@/components/UserAccountPage/AccountInfoForm";
 
 const AccountInfomation = () => {
   return (

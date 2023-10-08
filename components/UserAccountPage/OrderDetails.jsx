@@ -1,6 +1,6 @@
 import React from "react";
 import ImageWithPlaceholder from "@/components/ImageWithPlaceholder";
-import OrderStatusBadge from "@/components/AccountPage/OrderStatusBadge";
+import OrderStatusBadge from "@/components/UserAccountPage/OrderStatusBadge";
 import Link from "next/link";
 
 const OrderDetails = ({ order }) => {

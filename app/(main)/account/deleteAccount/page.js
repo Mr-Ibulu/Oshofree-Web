@@ -1,4 +1,4 @@
-import DeleteAccountForm from "@/components/AccountPage/DeleteAccountForm";
+import DeleteAccountForm from "@/components/UserAccountPage/DeleteAccountForm";
 import React from "react";
 
 const DeleteAccount = () => {

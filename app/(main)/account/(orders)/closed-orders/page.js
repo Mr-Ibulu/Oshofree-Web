@@ -1,6 +1,6 @@
 import React from "react";
 import { orders } from "@/data/orders";
-import OrderPreview from "@/components/AccountPage/OrderPreview";
+import OrderPreview from "@/components/UserAccountPage/OrderPreview";
 
 const ClosedOrders = () => {
   const closeOrders = orders.filter((order) => order.status === "cancelled");

@@ -1,6 +1,6 @@
 import React from "react";
 import { orders } from "@/data/orders";
-import OrderPreview from "@/components/AccountPage/OrderPreview";
+import OrderPreview from "@/components/UserAccountPage/OrderPreview";
 
 const OpenOrders = () => {
   const openOrders = orders.filter((order) => order.status === "pending");

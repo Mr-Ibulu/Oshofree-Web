@@ -1,6 +1,6 @@
 import React from "react";
 import { orders } from "@/data/orders";
-import OrderDetails from "@/components/AccountPage/OrderDetails";
+import OrderDetails from "@/components/UserAccountPage/OrderDetails";
 
 export function generateStaticParams() {
   const closedOrders = orders.filter((order) => order.status === "cancelled");
