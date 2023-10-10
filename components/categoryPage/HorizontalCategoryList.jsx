@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import { findRootParent, findSiblingCategories, findSubCategories } from "@/lib/utils";
-import StaggerAnimation from "../animations/StaggerAnimation";
+import StaggerContainer from "../animations/StaggerContainer";
 
 const HorizontalCategoryList = ({ category }) => {
   const subCategories = findSubCategories(category);
   return subCategories.length > 0 ? (
-    <StaggerAnimation
-      viewPortAmount={0.8}
+    <StaggerContainer
+      viewportAmount={0.8}
       repeat={true}
       xOffset={20}
       duration={0.3}
@@ -20,10 +20,10 @@ const HorizontalCategoryList = ({ category }) => {
           <Link href={`/${findRootParent(cat).slug}/${cat.slug}`}>{cat.title}</Link>
         </div>
       ))}
-    </StaggerAnimation>
+    </StaggerContainer>
   ) : (
-    <StaggerAnimation
-      viewPortAmount={0.8}
+    <StaggerContainer
+      viewportAmount={0.8}
       repeat={true}
       xOffset={20}
       duration={0.8}
@@ -41,7 +41,7 @@ const HorizontalCategoryList = ({ category }) => {
           <Link href={`/${findRootParent(cat).slug}/${cat.slug}`}>{cat.title}</Link>
         </div>
       ))}
-    </StaggerAnimation>
+    </StaggerContainer>
   );
 };
 

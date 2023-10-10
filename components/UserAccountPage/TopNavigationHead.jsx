@@ -1,21 +1,20 @@
 "use client";
 
 import React from "react";
-import FadeInFromSides from "@/components/animations/FadeInFromSides";
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { MdOutlineChevronLeft, MdOutlineClose, MdOutlineSettings } from "react-icons/md";
-import StaggerAnimation from "../animations/StaggerAnimation";
+import StaggerContainer from "../animations/StaggerContainer";
 
-const TopNavigationHead = ({ navGroups }) => {
+const TopNavigationHead = ({ navGroups, className }) => {
   const pathname = usePathname();
   const router = useRouter();
   const activeGroup = navGroups.find((navGroup) => navGroup.links.find((link) => link.href === pathname));
 
   return (
-    <>
-      <FadeInFromSides reapeat={true} duration={0.7} yOffset={20} viewportAmount={0.1} delay={0.2} className="flex items-center">
+    <div className={`${className}`}>
+      <div className={`flex items-center`}>
         <div className="font-bold capitalize text-2xl sm:text-3xl [word-spacing:3px] leading-[3rem] flex items-center gap-2">
           {activeGroup ? (
             <>
@@ -62,10 +61,10 @@ const TopNavigationHead = ({ navGroups }) => {
             </div>
           </SheetContent>
         </Sheet>
-      </FadeInFromSides>
+      </div>
       {activeGroup && (
-        <StaggerAnimation
-          viewPortAmount={0.8}
+        <StaggerContainer
+          viewportAmount={0.8}
           repeat={true}
           xOffset={20}
           duration={0.8}
@@ -84,9 +83,9 @@ const TopNavigationHead = ({ navGroups }) => {
               <Link href={option.href}>{option.name}</Link>
             </div>
           ))}
-        </StaggerAnimation>
+        </StaggerContainer>
       )}
-    </>
+    </div>
   );
 };
 

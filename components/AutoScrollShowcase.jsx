@@ -136,7 +136,7 @@ const AutoScrollShowcase = ({ scroll = true, horizontal = true, className, child
 
   return (
     <>
-      <div className={`relative ${horizontal ? "flex" : ""}  ${!horizontal ? " hidden sm:flex flex-col justify-center gap-4" : ""}`}>
+      <div className={`relative ${horizontal ? "flex" : ""} ${!horizontal ? "hidden sm:flex flex-col justify-center gap-4" : ""}`}>
         {!horizontal && (
           <div className="flex justify-center">
             <button

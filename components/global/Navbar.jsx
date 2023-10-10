@@ -92,10 +92,10 @@ const Navbar = () => {
           <Link href={"/sell"} className="hover:underline decoration-red-500 decoration-2 underline-offset-4 flex items-center gap-1">
             Sell On Oshofree
           </Link>
-          <Link href={"/blog"} className="hidden hover:underline decoration-red-500 decoration-2 underline-offset-4 xl:flex items-center gap-1">
+          <Link href={"/"} className="hidden hover:underline decoration-red-500 decoration-2 underline-offset-4 xl:flex items-center gap-1">
             Blog
           </Link>
-          <Link href={"/help"} className="hover:underline decoration-red-500 decoration-2 underline-offset-4 flex items-center gap-1">
+          <Link href={"/"} className="hover:underline decoration-red-500 decoration-2 underline-offset-4 flex items-center gap-1">
             Help
           </Link>
         </nav>

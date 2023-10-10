@@ -7,7 +7,6 @@ import CategoryCardCollection from "@/components/homePage/CategoryCardCollection
 import LocationPickerRadix from "@/components/ui/locationPickerRadix";
 import VendorForm from "@/components/VendorForm";
 import ImageWithPlaceholder from "@/components/ImageWithPlaceholder";
-import FadeInFromSides from "@/components/animations/FadeInFromSides";
 import Float from "@/components/animations/Float";
 import vendor from "@/public/images/vendor.webp";
 import vendor2 from "@/public/images/vendor2.jpg";
@@ -18,6 +17,7 @@ import ipad from "@/public/images/ipad-frame.png";
 import iphone from "@/public/images/iphone-frame.png";
 import AutoScrollShowcase from "@/components/AutoScrollShowcase";
 import { findAllRootCategories } from "@/lib/utils";
+import StaggerContainer from "@/components/animations/StaggerContainer";
 
 export default function Home() {
   return (
@@ -167,21 +167,23 @@ export default function Home() {
               />
             </Float>
           </div>
-          <div className="sm:mt-6 mb-10 xl:basis-1/2">
-            <FadeInFromSides yOffset={100} delay={0.1}>
-              <h1 className="text-2xl sm:text-4xl font-extrabold [word-spacing:5px] mb-6 text-center">Sell a Product or Service on Oshofree</h1>
-            </FadeInFromSides>
-            <FadeInFromSides yOffset={100} delay={0.3}>
-              <div className="mb-6  sm:w-[70%] xl:w-auto mx-auto">
-                <p className="[word-spacing:3px] text-sm sm:text-base">
-                  Reach New Customers. Showcase Your Deals on Products and Services. Build Loyalty. Get Started Today!
-                </p>
-              </div>
-            </FadeInFromSides>
-            <FadeInFromSides yOffset={100} delay={0.4} viewportAmount={0.1}>
-              <VendorForm showMoreInfoButton={true} />
-            </FadeInFromSides>
-          </div>
+          <StaggerContainer
+            selector=".stagger"
+            viewportAmount={0.1}
+            yOffset={100}
+            duration={1}
+            staggerChildren={0.3}
+            delayChildren={0}
+            className="sm:mt-6 mb-10 xl:basis-1/2"
+          >
+            <h1 className="stagger text-2xl sm:text-4xl font-extrabold [word-spacing:5px] mb-6 text-center">Sell a Product or Service on Oshofree</h1>
+            <div className="stagger mb-6 sm:w-[70%] xl:w-auto mx-auto">
+              <p className="[word-spacing:3px] text-sm sm:text-base">
+                Reach New Customers. Showcase Your Deals on Products and Services. Build Loyalty. Get Started Today!
+              </p>
+            </div>
+            <VendorForm showMoreInfoButton={true} className={"stagger"} />
+          </StaggerContainer>
         </div>
       </SnapSection>
       <SnapSection nextSectionTitle={"Footer"} className="pt-20">
@@ -200,24 +202,30 @@ export default function Home() {
               </Float>
             </div>
           </div>
-          <div className="my-auto lg:basis-1/2 flex flex-col justify-center">
-            <FadeInFromSides yOffset={100} delay={0.1}>
-              <h1 className="text-2xl sm:text-4xl font-extrabold [word-spacing:5px] mb-6 text-center">Experience The Convenience Of Our App</h1>
-            </FadeInFromSides>
-            <FadeInFromSides yOffset={100} delay={0.3} className="mb-6 sm:w-[90%] mx-auto">
+          <StaggerContainer
+            selector=".stagger"
+            viewportAmount={0.1}
+            yOffset={100}
+            duration={1}
+            staggerChildren={0.3}
+            delayChildren={0}
+            className="my-auto lg:basis-1/2 flex flex-col justify-center"
+          >
+            <h1 className="stagger text-2xl sm:text-4xl font-extrabold [word-spacing:5px] mb-6 text-center">Experience The Convenience Of Our App</h1>
+            <div className="stagger mb-6 sm:w-[90%] mx-auto">
               <p className="[word-spacing:3px] text-sm sm:text-base">
                 Get instant access to our services and stay connected on thee go. Unlock a world of possibilities at your fingertips.
               </p>
-            </FadeInFromSides>
-            <FadeInFromSides yOffset={100} delay={0.4} className="flex gap-8 pt-6 px-3 items-center justify-center">
+            </div>
+            <div className="stagger flex gap-8 pt-6 px-3 items-center justify-center">
               <Link href={"/"} className="relative">
                 <ImageWithPlaceholder src={appleStore} alt={"apple-store-button"} className="w-52" />
               </Link>
               <Link href={"/"} className="relative">
                 <ImageWithPlaceholder src={playStore} alt={"play-store-button"} className="w-52" />
               </Link>
-            </FadeInFromSides>
-          </div>
+            </div>
+          </StaggerContainer>
         </div>
       </SnapSection>
     </>

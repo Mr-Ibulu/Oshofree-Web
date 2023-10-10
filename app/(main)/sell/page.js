@@ -1,12 +1,12 @@
 import React from "react";
 import ImageWithPlaceholder from "@/components/ImageWithPlaceholder";
-import FadeInFromSides from "@/components/animations/FadeInFromSides";
 import Float from "@/components/animations/Float";
 import SnapSection from "@/components/global/SnapSection";
 import VendorForm from "@/components/VendorForm";
 import vendor from "@/public/images/vendor.webp";
 import vendor2 from "@/public/images/vendor2.jpg";
 import vendor3 from "@/public/images/vendor3.webp";
+import StaggerContainer from "@/components/animations/StaggerContainer";
 
 const page = () => {
   return (
@@ -54,30 +54,30 @@ const page = () => {
               />
             </Float>
           </div>
-          <div className="sm:mt-6 mb-10 xl:basis-1/2">
-            <FadeInFromSides yOffset={100} delay={0.1}>
-              <h1 className="text-2xl sm:text-4xl font-extrabold [word-spacing:5px] mb-6 text-center">Sell a Product or Service on Oshofree</h1>
-            </FadeInFromSides>
-            <FadeInFromSides yOffset={100} delay={0.3}>
-              <div className="mb-6  sm:w-[70%] xl:w-auto mx-auto">
-                <p className="[word-spacing:3px] text-sm sm:text-base">
-                  Reach New Customers. Showcase Your Deals on Products and Services. Build Loyalty. Get Started Today!
-                </p>
-              </div>
-            </FadeInFromSides>
-            <FadeInFromSides yOffset={100} delay={0.4} viewportAmount={0.1}>
-              <VendorForm />
-            </FadeInFromSides>
-          </div>
+          <StaggerContainer
+            selector=".stagger"
+            viewportAmount={0.1}
+            yOffset={100}
+            duration={1}
+            staggerChildren={0.3}
+            delayChildren={0}
+            className="sm:mt-6 mb-10 xl:basis-1/2"
+          >
+            <h1 className="stagger text-2xl sm:text-4xl font-extrabold [word-spacing:5px] mb-6 text-center">Sell a Product or Service on Oshofree</h1>
+            <div className="stagger mb-6 sm:w-[70%] xl:w-auto mx-auto">
+              <p className="[word-spacing:3px] text-sm sm:text-base">
+                Reach New Customers. Showcase Your Deals on Products and Services. Build Loyalty. Get Started Today!
+              </p>
+            </div>
+            <VendorForm className={"stagger"} />
+          </StaggerContainer>
         </div>
       </SnapSection>
       <SnapSection nextSectionTitle={""} className="pt-20">
-        <FadeInFromSides duration={0.7} yOffset={20} viewportAmount={0.1} delay={0.2} className="mt-6 mb-11 text-center capitalize">
-          <h1 className="text-2xl sm:text-3xl font-extrabold">Why Use Oshofree</h1>
-        </FadeInFromSides>
-        <section className="px-6 py-3 lg:px-28 xl:px-32 2xl:px-14 max-w-[1328px] mx-auto space-y-10">
-          <FadeInFromSides duration={0.7} yOffset={20} viewportAmount={0.1} delay={0.3} className="max-w-3xl mx-auto">
-            <div>
+        <StaggerContainer selector=".stagger" viewportAmount={0.1} yOffset={50} duration={0.5} staggerChildren={0.12} delayChildren={0.2}>
+          <h1 className="stagger text-2xl sm:text-3xl font-extrabold mt-6 mb-11 text-center capitalize">Why Use Oshofree</h1>
+          <section className="px-6 py-3 lg:px-28 xl:px-32 2xl:px-14 max-w-[1328px] mx-auto space-y-10">
+            <div className="stagger max-w-3xl mx-auto">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias reprehenderit totam, quasi quae libero assumenda eligendi laborum
               iure sunt voluptates itaque ducimus quos esse maiores dolores aut fugiat iste? Nisi, reprehenderit! Deserunt consequuntur nulla minus
               quo quia ipsa voluptatum at. Beatae non neque earum eaque totam similique a, libero consectetur iusto eligendi ducimus laborum soluta
@@ -85,16 +85,16 @@ const page = () => {
               laudantium optio laboriosam doloribus dolor rem, tenetur quisquam ratione reprehenderit saepe, dicta quos debitis nobis! Repudiandae
               sunt alias ipsum voluptatibus tempora perferendis unde, fugiat itaque officia praesentium ratione, necessitatibus veritatis.
             </div>
-          </FadeInFromSides>
-          <FadeInFromSides duration={0.7} yOffset={20} viewportAmount={0.1} delay={0.4} className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold mb-3 text-center">Our Mission</h2>
-            <div>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit molestiae facere, placeat neque ullam asperiores voluptatem ab. Iure
-              beatae rerum debitis ducimus. Maiores corporis quisquam tempore quis, minima nisi at cupiditate doloremque, facere nulla impedit nostrum
-              dolorum rem? Aliquid repudiandae magnam natus non voluptates incidunt reprehenderit. Fugit qui tempora eaque!
+            <div className="stagger max-w-3xl mx-auto">
+              <h2 className="text-2xl font-bold mb-3 text-center">Our Mission</h2>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit molestiae facere, placeat neque ullam asperiores voluptatem ab. Iure
+                beatae rerum debitis ducimus. Maiores corporis quisquam tempore quis, minima nisi at cupiditate doloremque, facere nulla impedit
+                nostrum dolorum rem? Aliquid repudiandae magnam natus non voluptates incidunt reprehenderit. Fugit qui tempora eaque!
+              </div>
             </div>
-          </FadeInFromSides>
-        </section>
+          </section>
+        </StaggerContainer>
       </SnapSection>
     </>
   );

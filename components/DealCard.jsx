@@ -1,11 +1,11 @@
 import { BsFillSuitHeartFill, BsSuitHeart } from "react-icons/bs";
 import ImageWithPlaceholder from "@/components/ImageWithPlaceholder";
-import FadeInFromZoom from "./animations/FadeInFromZoom";
-import RatingStars from "./ui/ratingStars";
+import DropInFromZoom from "@/components/animations/DropInFromZoom";
+import RatingStars from "@/components/ui/ratingStars";
 
 const DealCard = ({ image, isNew, rating, description, prevPrice, newPrice, className = "" }) => {
   return (
-    <FadeInFromZoom reapeat={true}>
+    <DropInFromZoom repeat={true}>
       <div
         className={`${className} group rounded-xl bg-white shadow shadow-gray-200 transition-transform duration-200 delay-75 ease-in-out hover:-translate-y-2`}
       >
@@ -53,7 +53,7 @@ const DealCard = ({ image, isNew, rating, description, prevPrice, newPrice, clas
           </div>
         </div>
       </div>
-    </FadeInFromZoom>
+    </DropInFromZoom>
   );
 };
 

@@ -3,9 +3,9 @@
 import React, { useEffect } from "react";
 import { stagger, useAnimate, useInView } from "framer-motion";
 
-const StaggerAnimation = ({
+const StaggerContainer = ({
   selector = "div",
-  viewPortAmount = 0.2,
+  viewportAmount = 0.2,
   repeat = false,
   xOffset = 0,
   yOffset = 0,
@@ -17,7 +17,7 @@ const StaggerAnimation = ({
   children,
 }) => {
   const [scope, animate] = useAnimate();
-  const containerInView = useInView(scope, { amount: viewPortAmount, once: !repeat });
+  const containerInView = useInView(scope, { amount: viewportAmount, once: !repeat });
   useEffect(() => {
     if (scope.current) {
       animate(selector, containerInView ? { x: [xOffset, 0], y: [yOffset, 0], opacity: [0, 1] } : { x: [xOffset], y: [yOffset], opacity: [0] }, {
@@ -36,4 +36,4 @@ const StaggerAnimation = ({
   );
 };
 
-export default StaggerAnimation;
+export default StaggerContainer;

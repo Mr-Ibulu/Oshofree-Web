@@ -12,14 +12,14 @@ import {
 import Link from "next/link";
 import { SheetClose } from "@/components/ui/sheet";
 import { findAllRootCategories, findSubCategories } from "@/lib/utils";
-import StaggerAnimation from "../animations/StaggerAnimation";
+import StaggerContainer from "../animations/StaggerContainer";
 
 const Sidebar = () => {
   return (
     <div className=" overflow-y-scroll rounded-r-2xl h-full scrollbar-none">
-      <StaggerAnimation
+      <StaggerContainer
         selector="li"
-        viewPortAmount={0.2}
+        viewportAmount={0.2}
         repeat={true}
         xOffset={-100}
         duration={0.45}
@@ -112,11 +112,11 @@ const Sidebar = () => {
             </SheetClose>
           </li>
         </ul>
-      </StaggerAnimation>
+      </StaggerContainer>
       <div className="bg-gray-200 h-3"></div>
-      <StaggerAnimation
+      <StaggerContainer
         selector="li"
-        viewPortAmount={0.2}
+        viewportAmount={0.2}
         repeat={true}
         xOffset={-100}
         duration={0.45}
@@ -146,11 +146,11 @@ const Sidebar = () => {
             </SheetClose>
           </li>
         </ul>
-      </StaggerAnimation>
+      </StaggerContainer>
       <div className="bg-gray-200 h-3"></div>
-      <StaggerAnimation
+      <StaggerContainer
         selector="li"
-        viewPortAmount={0.2}
+        viewportAmount={0.2}
         repeat={true}
         xOffset={-100}
         duration={0.45}
@@ -181,7 +181,7 @@ const Sidebar = () => {
             </SheetClose>
           </li>
         </ul>
-      </StaggerAnimation>
+      </StaggerContainer>
     </div>
   );
 };

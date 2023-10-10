@@ -4,9 +4,9 @@ import * as Form from "@radix-ui/react-form";
 import { BiSolidErrorCircle } from "react-icons/bi";
 import Link from "next/link";
 
-const VendorForm = ({ showMoreInfoButton = false }) => {
+const VendorForm = ({ showMoreInfoButton = false, className }) => {
   return (
-    <div className="bg-white border shadow-lg shadow-gray-300 p-8 rounded-2xl">
+    <div className={`${className} bg-white border shadow-lg shadow-gray-300 p-8 rounded-2xl`}>
       <Form.Root>
         <Form.Field className="grid mb-2" name="business_name">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
