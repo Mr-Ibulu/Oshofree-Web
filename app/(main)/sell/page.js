@@ -12,11 +12,11 @@ const page = () => {
   return (
     <>
       <SnapSection nextSectionTitle={"Why Use Oshofree"} className="pt-20">
-        <div className="flex flex-col xl:flex-row px-6 lg:px-36 xl:px-40  max-w-screen-2xl mx-auto">
-          <div className="xl:basis-1/2 relative h-64 sm:h-80 lg:h-96 xl:h-auto overflow-hidden">
+        <div className="mx-auto flex max-w-screen-2xl flex-col px-6 lg:px-36  xl:flex-row xl:px-40">
+          <div className="relative h-64 overflow-hidden sm:h-80 lg:h-96 xl:h-auto xl:basis-1/2">
             <Float
               delay={0}
-              className="aspect-[4/3] w-[50%] md:w-[35%] lg:w-[45%] xl:w-[80%] absolute left-[10%] md:left-[20%] lg:left-[10%] xl:left-0 top-[8%] overflow-hidden rounded-lg"
+              className="absolute left-[10%] top-[8%] aspect-[4/3] w-[50%] overflow-hidden rounded-lg md:left-[20%] md:w-[35%] lg:left-[10%] lg:w-[45%] xl:left-0 xl:w-[80%]"
             >
               <ImageWithPlaceholder
                 src={vendor3}
@@ -29,7 +29,7 @@ const page = () => {
             </Float>
             <Float
               delay={1}
-              className="aspect-[4/3] w-[40%] md:w-[28%] lg:w-[35%] xl:w-[60%] absolute right-[10%] md:right-[23%] lg:right-[20%] xl:right-[5%] top-[30%] xl:top-[40%] overflow-hidden rounded-lg"
+              className="absolute right-[10%] top-[30%] aspect-[4/3] w-[40%] overflow-hidden rounded-lg md:right-[23%] md:w-[28%] lg:right-[20%] lg:w-[35%] xl:right-[5%] xl:top-[40%] xl:w-[60%]"
             >
               <ImageWithPlaceholder
                 src={vendor}
@@ -42,7 +42,7 @@ const page = () => {
             </Float>
             <Float
               delay={2}
-              className="aspect-[4/3] w-[30%] md:w-[20%] lg:w-[25%] xl:w-[45%] absolute top-[50%] md:top-[58%] xl:top-[45%] left-[25%] md:left-[33%] lg:left-[25%] xl:left-[10%] overflow-hidden rounded-lg"
+              className="absolute left-[25%] top-[50%] aspect-[4/3] w-[30%] overflow-hidden rounded-lg md:left-[33%] md:top-[58%] md:w-[20%] lg:left-[25%] lg:w-[25%] xl:left-[10%] xl:top-[45%] xl:w-[45%]"
             >
               <ImageWithPlaceholder
                 src={vendor2}
@@ -61,11 +61,11 @@ const page = () => {
             duration={1}
             staggerChildren={0.3}
             delayChildren={0}
-            className="sm:mt-6 mb-10 xl:basis-1/2"
+            className="mb-10 sm:mt-6 xl:basis-1/2"
           >
-            <h1 className="stagger text-2xl sm:text-4xl font-extrabold [word-spacing:5px] mb-6 text-center">Sell a Product or Service on Oshofree</h1>
-            <div className="stagger mb-6 sm:w-[70%] xl:w-auto mx-auto">
-              <p className="[word-spacing:3px] text-sm sm:text-base">
+            <h1 className="stagger mb-6 text-center text-2xl font-extrabold [word-spacing:5px] sm:text-4xl">Sell a Product or Service on Oshofree</h1>
+            <div className="stagger mx-auto mb-6 sm:w-[70%] xl:w-auto">
+              <p className="text-sm [word-spacing:3px] sm:text-base">
                 Reach New Customers. Showcase Your Deals on Products and Services. Build Loyalty. Get Started Today!
               </p>
             </div>
@@ -75,9 +75,9 @@ const page = () => {
       </SnapSection>
       <SnapSection nextSectionTitle={""} className="pt-20">
         <StaggerContainer selector=".stagger" viewportAmount={0.1} yOffset={50} duration={0.5} staggerChildren={0.12} delayChildren={0.2}>
-          <h1 className="stagger text-2xl sm:text-3xl font-extrabold mt-6 mb-11 text-center capitalize">Why Use Oshofree</h1>
-          <section className="px-6 py-3 lg:px-28 xl:px-32 2xl:px-14 max-w-[1328px] mx-auto space-y-10">
-            <div className="stagger max-w-3xl mx-auto">
+          <h1 className="stagger mb-11 mt-6 text-center text-2xl font-extrabold capitalize sm:text-3xl">Why Use Oshofree</h1>
+          <section className="mx-auto max-w-[1328px] space-y-10 px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
+            <div className="stagger mx-auto max-w-3xl">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias reprehenderit totam, quasi quae libero assumenda eligendi laborum
               iure sunt voluptates itaque ducimus quos esse maiores dolores aut fugiat iste? Nisi, reprehenderit! Deserunt consequuntur nulla minus
               quo quia ipsa voluptatum at. Beatae non neque earum eaque totam similique a, libero consectetur iusto eligendi ducimus laborum soluta
@@ -85,8 +85,8 @@ const page = () => {
               laudantium optio laboriosam doloribus dolor rem, tenetur quisquam ratione reprehenderit saepe, dicta quos debitis nobis! Repudiandae
               sunt alias ipsum voluptatibus tempora perferendis unde, fugiat itaque officia praesentium ratione, necessitatibus veritatis.
             </div>
-            <div className="stagger max-w-3xl mx-auto">
-              <h2 className="text-2xl font-bold mb-3 text-center">Our Mission</h2>
+            <div className="stagger mx-auto max-w-3xl">
+              <h2 className="mb-3 text-center text-2xl font-bold">Our Mission</h2>
               <div>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit molestiae facere, placeat neque ullam asperiores voluptatem ab. Iure
                 beatae rerum debitis ducimus. Maiores corporis quisquam tempore quis, minima nisi at cupiditate doloremque, facere nulla impedit

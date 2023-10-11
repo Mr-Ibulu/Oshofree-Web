@@ -72,7 +72,7 @@ const SnapView = ({ children }) => {
   return (
     <main
       ref={container}
-      className={`${allowFullScreenMode ? "overflow-x-hidden snap-y snap-mandatory" : ""} text-gray-800 scrollbar-none relative`}
+      className={`${allowFullScreenMode ? "snap-y snap-mandatory overflow-x-hidden" : ""} relative text-gray-800 scrollbar-none`}
       style={{ height: allowFullScreenMode ? windowHeight : "fit-content" }}
     >
       <motion.div style={{ y: y }} className=" fixed h-[150%] w-full">

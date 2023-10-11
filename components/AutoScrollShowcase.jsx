@@ -67,11 +67,13 @@ const AutoScrollShowcase = ({ scroll = true, horizontal = true, className, child
       });
     }
     return () => clearTimeout(autoscroll);
-  }, []);
+  }, [horizontal, scroll]);
 
   const endTouchTimout = useRef();
 
   useEffect(() => {
+    const scrollContainer = container.current;
+
     const registerTouchStart = () => {
       touchDetected.current = true;
     };
@@ -80,14 +82,14 @@ const AutoScrollShowcase = ({ scroll = true, horizontal = true, className, child
       endTouchTimout.current = setTimeout(() => (touchDetected.current = false), 2000);
     };
 
-    container.current.addEventListener("touchstart", registerTouchStart, { passive: true });
-    container.current.addEventListener("touchend", registerTouchEnd, { passive: true });
+    scrollContainer.addEventListener("touchstart", registerTouchStart, { passive: true });
+    scrollContainer.addEventListener("touchend", registerTouchEnd, { passive: true });
 
     return () => {
-      if (container.current) {
+      if (scrollContainer) {
         clearTimeout(endTouchTimout.current);
-        container.current.removeEventListener("touchstart", registerTouchStart);
-        container.current.removeEventListener("touchend", registerTouchEnd);
+        scrollContainer.removeEventListener("touchstart", registerTouchStart);
+        scrollContainer.removeEventListener("touchend", registerTouchEnd);
       }
     };
   }, []);
@@ -136,7 +138,7 @@ const AutoScrollShowcase = ({ scroll = true, horizontal = true, className, child
 
   return (
     <>
-      <div className={`relative ${horizontal ? "flex" : ""} ${!horizontal ? "hidden sm:flex flex-col justify-center gap-4" : ""}`}>
+      <div className={`relative ${horizontal ? "flex" : ""} ${!horizontal ? "hidden flex-col justify-center gap-4 sm:flex" : ""}`}>
         {!horizontal && (
           <div className="flex justify-center">
             <button
@@ -144,7 +146,7 @@ const AutoScrollShowcase = ({ scroll = true, horizontal = true, className, child
                 skipBackward();
               }}
               onMouseUp={() => skipButtonReleased()}
-              className="rounded-full focus:outline-none shadow active:shadow-sm hover:scale-125 transition-transform duration-200 ease-in-out active:scale-95"
+              className="rounded-full shadow transition-transform duration-200 ease-in-out hover:scale-125 focus:outline-none active:scale-95 active:shadow-sm"
             >
               <MdKeyboardArrowUp className="text-4xl text-red-500" />
             </button>
@@ -160,7 +162,7 @@ const AutoScrollShowcase = ({ scroll = true, horizontal = true, className, child
                 skipFoward();
               }}
               onMouseUp={() => skipButtonReleased()}
-              className="rounded-full focus:outline-none shadow active:shadow-sm hover:scale-125 transition-transform duration-200 ease-in-out active:scale-95"
+              className="rounded-full shadow transition-transform duration-200 ease-in-out hover:scale-125 focus:outline-none active:scale-95 active:shadow-sm"
             >
               <MdKeyboardArrowDown className="text-4xl text-red-500" />
             </button>
@@ -168,9 +170,9 @@ const AutoScrollShowcase = ({ scroll = true, horizontal = true, className, child
         )}
       </div>
       {horizontal ? (
-        <div className="hidden xl:flex justify-center gap-7">
+        <div className="hidden justify-center gap-7 xl:flex">
           <button
-            className="rounded-full focus:outline-none shadow active:shadow-sm hover:scale-125 transition-transform duration-200 ease-in-out active:scale-95"
+            className="rounded-full shadow transition-transform duration-200 ease-in-out hover:scale-125 focus:outline-none active:scale-95 active:shadow-sm"
             onPointerDown={() => {
               skipBackward();
             }}
@@ -179,7 +181,7 @@ const AutoScrollShowcase = ({ scroll = true, horizontal = true, className, child
             <MdNavigateBefore className="text-4xl text-red-500" />
           </button>
           <button
-            className="rounded-full focus:outline-none shadow active:shadow-sm hover:scale-125 transition-transform duration-200 ease-in-out active:scale-95"
+            className="rounded-full shadow transition-transform duration-200 ease-in-out hover:scale-125 focus:outline-none active:scale-95 active:shadow-sm"
             onPointerDown={() => {
               skipFoward();
             }}

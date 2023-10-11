@@ -14,7 +14,7 @@ export const metadata = {
 export default function MembershipLayout({ children }) {
   return (
     <html lang="en" className={plusJakartaSans.className}>
-      <body className="scrollbar-none before:block before:bg-red-500 before:h-[1px] subpixel-antialiased">{children}</body>
+      <body className="subpixel-antialiased scrollbar-none before:block before:h-[1px] before:bg-red-500">{children}</body>
     </html>
   );
 }

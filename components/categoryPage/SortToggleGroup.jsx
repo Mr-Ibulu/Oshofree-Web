@@ -8,7 +8,7 @@ const SortToggleGroup = () => {
     "bg-white border-y-[1px] first:border-l-[1px] last:border-r-[1px] text-xs xl:text-sm font-medium first:rounded-l-lg last:rounded-r-lg focus:z-10 focus:shadow focus:border-x-[1px] focus:outline-none p-2 data-[state=on]:text-sky-800 data-[state=on]:bg-sky-100";
   return (
     <>
-      <div className="text-xs xl:text-sm font-medium">Sort By:</div>
+      <div className="text-xs font-medium xl:text-sm">Sort By:</div>
       <ToggleGroup.Root type="single" defaultValue="relevance" aria-label="Sort by">
         <ToggleGroup.Item value="relevance" className={toggleGroupItemCLasses} aria-label="Sort by Relevance">
           Relevance

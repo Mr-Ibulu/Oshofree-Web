@@ -6,7 +6,7 @@ const ProfileHoverMenu = () => {
   return (
     <ul className="font-normal">
       <li>
-        <Link href={"/account/account-info"} className="flex items-center h-12 pl-4 pr-8 hover:bg-gray-100">
+        <Link href={"/account/account-info"} className="flex h-12 items-center pl-4 pr-8 hover:bg-gray-100">
           <div className="w-10">
             <MdOutlineManageAccounts className="text-2xl" />
           </div>
@@ -14,7 +14,7 @@ const ProfileHoverMenu = () => {
         </Link>
       </li>
       <li>
-        <Link href={"/account/open-orders"} className="flex items-center h-12 pl-4 pr-8 hover:bg-gray-100">
+        <Link href={"/account/open-orders"} className="flex h-12 items-center pl-4 pr-8 hover:bg-gray-100">
           <div className="w-10">
             <MdOutlineShoppingBag className="text-2xl" />
           </div>
@@ -22,7 +22,7 @@ const ProfileHoverMenu = () => {
         </Link>
       </li>
       <li>
-        <Link href={"/account/wallet"} className="flex items-center h-12 pl-4 pr-8 hover:bg-gray-100">
+        <Link href={"/account/wallet"} className="flex h-12 items-center pl-4 pr-8 hover:bg-gray-100">
           <div className="w-10">
             <MdOutlineAccountBalanceWallet className="text-2xl" />
           </div>
@@ -33,7 +33,7 @@ const ProfileHoverMenu = () => {
         </Link>
       </li>
       <li>
-        <Link href={"/wishlist"} className="flex items-center h-12 pl-4 pr-8 hover:bg-gray-100">
+        <Link href={"/wishlist"} className="flex h-12 items-center pl-4 pr-8 hover:bg-gray-100">
           <div className="w-10">
             <MdFavoriteBorder className="text-2xl" />
           </div>
@@ -41,7 +41,7 @@ const ProfileHoverMenu = () => {
         </Link>
       </li>
       <li>
-        <Link href={"/logout"} className="flex items-center h-12 pl-4 pr-8 hover:bg-gray-100">
+        <Link href={"/logout"} className="flex h-12 items-center pl-4 pr-8 hover:bg-gray-100">
           <div className="w-10">
             <MdOutlineLogout className="text-2xl" />
           </div>

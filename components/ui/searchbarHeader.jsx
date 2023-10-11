@@ -10,53 +10,53 @@ const SearchbarHeader = () => {
   const [locationPickerOpen, setLocationPickerOpen] = useState(false);
 
   return (
-    <div className="mx-auto mb-6 bg-white sm:w-[80%] xl:w-[70%] 2xl:w-[60%] border-2 overflow-hidden border-gray-300 h-9 sm:h-10 font-medium rounded-full flex items-center gap-2 px-4">
-      <div className="text-2xl w-5">
+    <div className="mx-auto mb-6 flex h-9 items-center gap-2 overflow-hidden rounded-full border-2 border-gray-300 bg-white px-4 font-medium sm:h-10 sm:w-[80%] xl:w-[70%] 2xl:w-[60%]">
+      <div className="w-5 text-2xl">
         <MdSearch />
       </div>
       <input
         type="text"
         name="search"
         placeholder="Search Oshofree"
-        className="appearance-none focus:ring-0 focus:border-none focus:outline-none flex-grow bg-transparent"
+        className="flex-grow appearance-none bg-transparent focus:border-none focus:outline-none focus:ring-0"
       />
       <Popover.Root onOpenChange={(e) => setLocationPickerOpen(e)}>
         <Popover.Trigger asChild>
           <button
-            className="max-w-[30%] sm:max-w-[40%] focus:outline-none inline-flex items-center space-x-2 before:w-[1px] before:h-[25px] before:mr-1 before:bg-gray-400 before:block"
+            className="inline-flex max-w-[30%] items-center space-x-2 before:mr-1 before:block before:h-[25px] before:w-[1px] before:bg-gray-400 focus:outline-none sm:max-w-[40%]"
             aria-label="Change Location"
           >
             <div className="w-5 text-lg">
               <MdOutlineLocationOn />
             </div>
-            <span className="text-sm truncate">Port Harcourt</span>
+            <span className="truncate text-sm">Port Harcourt</span>
           </button>
         </Popover.Trigger>
         <Popover.Portal>
           <Popover.Content
             onOpenAutoFocus={(e) => e.preventDefault()}
-            className={`max-h-80 py-3 text-sm font-semibold bg-white shadow-lg flex flex-col rounded-xl w-[93vw] sm:w-96 overflow-hidden`}
+            className={`flex max-h-80 w-[93vw] flex-col overflow-hidden rounded-xl bg-white py-3 text-sm font-semibold shadow-lg sm:w-96`}
             sideOffset={10}
           >
             <div className="flex items-center gap-1 px-4">
               <MdSearch className="text-lg" />
               <div className="grow">
-                <input type="text" placeholder="Location" className="w-full text-base p-1 border-none font-light focus:ring-0 focus:outline-none" />
+                <input type="text" placeholder="Location" className="w-full border-none p-1 text-base font-light focus:outline-none focus:ring-0" />
               </div>
             </div>
             <hr className="mt-2" />
-            <button className="flex items-center gap-1 focus:outline-none hover:bg-gray-200 w-full text-left py-3 px-4 text-red-600">
+            <button className="flex w-full items-center gap-1 px-4 py-3 text-left text-red-600 hover:bg-gray-200 focus:outline-none">
               <div>
                 <BiCurrentLocation />
               </div>
               <div className="grow">Current Location</div>
             </button>
-            <div className="overflow-auto scrollbar-thin scrollbar-thumb-red-500 scrollbar-track-red-200 scrollbar-track-rounded-full scrollbar-thumb-rounded-full">
-              <button className="hover:bg-gray-200 w-full text-left py-2 focus:outline-none px-4">Odili Road, PH</button>
-              <button className="hover:bg-gray-200 w-full text-left py-2 focus:outline-none px-4">Odili Road, PH</button>
+            <div className="overflow-auto scrollbar-thin scrollbar-track-red-200 scrollbar-thumb-red-500 scrollbar-track-rounded-full scrollbar-thumb-rounded-full">
+              <button className="w-full px-4 py-2 text-left hover:bg-gray-200 focus:outline-none">Odili Road, PH</button>
+              <button className="w-full px-4 py-2 text-left hover:bg-gray-200 focus:outline-none">Odili Road, PH</button>
             </div>
             <Popover.Close
-              className="rounded-full h-[25px] w-[25px] inline-flex items-center justify-center absolute top-[5px] right-[5px] outline-none cursor-default"
+              className="absolute right-[5px] top-[5px] inline-flex h-[25px] w-[25px] cursor-default items-center justify-center rounded-full outline-none"
               aria-label="Close"
             >
               <GrClose />

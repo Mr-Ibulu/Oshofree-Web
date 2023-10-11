@@ -18,7 +18,7 @@ export const metadata = {
 const MainLayout = ({ children, auth }) => {
   return (
     <html lang="en" className={plusJakartaSans.className}>
-      <body className="scrollbar-none before:block before:bg-red-500 before:h-[1px] subpixel-antialiased">
+      <body className="subpixel-antialiased scrollbar-none before:block before:h-[1px] before:bg-red-500">
         <SnapView>
           <Navbar />
           {children}

@@ -23,7 +23,7 @@ const DealItem = ({ params }) => {
   return (
     <>
       <SnapSection nextSectionTitle={"About this deal"} className="pt-20">
-        <div className="px-6 py-3 lg:px-28 xl:px-32 2xl:px-14 max-w-[1328px] mx-auto">
+        <div className="mx-auto max-w-[1328px] px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
           <SearchbarHeader />
           <StaggerContainer
             selector=".stagger"
@@ -34,40 +34,40 @@ const DealItem = ({ params }) => {
             staggerChildren={0.12}
             delayChildren={0}
           >
-            <nav className="stagger hidden text-sm sm:flex mb-7">
+            <nav className="stagger mb-7 hidden text-sm sm:flex">
               {["Local", "Home Services", "Cleaning Services", "House Cleaning"].map((breadcrumb, index, arr) => (
                 <div className="inline-flex items-center text-blue-900" key={index}>
                   <Link href={""} className="hover:underline">
                     {breadcrumb}
                   </Link>
-                  {index !== arr.length - 1 ? <MdOutlineChevronRight className="text-lg mx-2" /> : ""}
+                  {index !== arr.length - 1 ? <MdOutlineChevronRight className="mx-2 text-lg" /> : ""}
                 </div>
               ))}
             </nav>
-            <div className="stagger hidden md:block mb-6">
-              <div className="font-bold capitalize md:text-2xl lg:text-3xl xl:text-4xl mb-6 [word-spacing:3px] leading-[3rem]">
+            <div className="stagger mb-6 hidden md:block">
+              <div className="mb-6 font-bold capitalize leading-[3rem] [word-spacing:3px] md:text-2xl lg:text-3xl xl:text-4xl">
                 <h1>{deal.description}</h1>
               </div>
-              <div className="flex items-center gap-3 mb-1">
-                <MdOutlineLocationOn className="text-lg text-gray-500 min-w-[15px]" /> <span className="">No. 15 Ehimare Crescent, Odili Rd</span>
+              <div className="mb-1 flex items-center gap-3">
+                <MdOutlineLocationOn className="min-w-[15px] text-lg text-gray-500" /> <span className="">No. 15 Ehimare Crescent, Odili Rd</span>
               </div>
-              <div className="flex items-center gap-3 mb-1">
-                <MdOutlineInfo className="text-lg text-gray-500 min-w-[15px]" />
+              <div className="mb-1 flex items-center gap-3">
+                <MdOutlineInfo className="min-w-[15px] text-lg text-gray-500" />
                 <span className="">{deal.description}</span>
               </div>
-              <div className="flex gap-2 items-center text-sm">
+              <div className="flex items-center gap-2 text-sm">
                 <span className="min-w-[15px]">{deal.rating}</span>
                 <RatingStars rating={deal.rating} />
                 <span className="text-gray-500">(59 Ratings)</span>
               </div>
             </div>
-            <div className="flex flex-col xl:flex-row gap-6">
-              <div className="stagger lg:basis-[65%] flex gap-4 h-72 sm:h-[400px] 3xl:h-[500px] md:mb-8">
+            <div className="flex flex-col gap-6 xl:flex-row">
+              <div className="stagger flex h-72 gap-4 sm:h-[400px] md:mb-8 lg:basis-[65%] 3xl:h-[500px]">
                 <AutoScrollShowcase
                   horizontal={false}
-                  className="w-20 h-[60%] flex flex-col gap-3 overflow-y-scroll overflow-x-hidden scrollbar-none"
+                  className="flex h-[60%] w-20 flex-col gap-3 overflow-x-hidden overflow-y-scroll scrollbar-none"
                 >
-                  <div className="relative w-full min-h-[64px] rounded-xl overflow-hidden">
+                  <div className="relative min-h-[64px] w-full overflow-hidden rounded-xl">
                     <ImageWithPlaceholder
                       src={deal.image}
                       alt={deal.description}
@@ -76,7 +76,7 @@ const DealItem = ({ params }) => {
                       className={"object-cover"}
                     />
                   </div>
-                  <div className="relative w-full min-h-[64px] rounded-xl overflow-hidden">
+                  <div className="relative min-h-[64px] w-full overflow-hidden rounded-xl">
                     <ImageWithPlaceholder
                       src={deal.image}
                       alt={deal.description}
@@ -85,7 +85,7 @@ const DealItem = ({ params }) => {
                       className={"object-cover"}
                     />
                   </div>
-                  <div className="relative w-full min-h-[64px] rounded-xl overflow-hidden">
+                  <div className="relative min-h-[64px] w-full overflow-hidden rounded-xl">
                     <ImageWithPlaceholder
                       src={deal.image}
                       alt={deal.description}
@@ -94,7 +94,7 @@ const DealItem = ({ params }) => {
                       className={"object-cover"}
                     />
                   </div>
-                  <div className="relative w-full min-h-[64px] rounded-xl overflow-hidden">
+                  <div className="relative min-h-[64px] w-full overflow-hidden rounded-xl">
                     <ImageWithPlaceholder
                       src={deal.image}
                       alt={deal.description}
@@ -103,7 +103,7 @@ const DealItem = ({ params }) => {
                       className={"object-cover"}
                     />
                   </div>
-                  <div className="relative w-full min-h-[64px] rounded-xl overflow-hidden">
+                  <div className="relative min-h-[64px] w-full overflow-hidden rounded-xl">
                     <ImageWithPlaceholder
                       src={deal.image}
                       alt={deal.description}
@@ -113,45 +113,45 @@ const DealItem = ({ params }) => {
                     />
                   </div>
                 </AutoScrollShowcase>
-                <div className="grow relative rounded-xl overflow-hidden">
+                <div className="relative grow overflow-hidden rounded-xl">
                   <ImageWithPlaceholder src={deal.image} alt={deal.description} fill={true} sizes={"100vw"} className={"object-cover"} />
                 </div>
               </div>
-              <div className="stagger md:hidden mb-6 text-sm">
-                <div className="font-bold capitalize text-xl sm:text-2xl mb-6 [word-spacing:3px] ">
+              <div className="stagger mb-6 text-sm md:hidden">
+                <div className="mb-6 text-xl font-bold capitalize [word-spacing:3px] sm:text-2xl ">
                   <h1>{deal.description}</h1>
                 </div>
-                <div className="flex items-center gap-3 mb-1">
-                  <MdOutlineLocationOn className="text-lg text-gray-500 min-w-[20px]" /> <span className="">No. 22 Royal Avenue, Odili Rd</span>
+                <div className="mb-1 flex items-center gap-3">
+                  <MdOutlineLocationOn className="min-w-[20px] text-lg text-gray-500" /> <span className="">No. 22 Royal Avenue, Odili Rd</span>
                 </div>
-                <div className="flex items-center gap-3 mb-1">
-                  <MdOutlineInfo className="text-lg text-gray-500 min-w-[20px]" />
+                <div className="mb-1 flex items-center gap-3">
+                  <MdOutlineInfo className="min-w-[20px] text-lg text-gray-500" />
                   <span className="">{deal.description}</span>
                 </div>
-                <div className="flex gap-2 items-center text-sm">
+                <div className="flex items-center gap-2 text-sm">
                   <span className="min-w-[20px]">{deal.rating}</span>
                   <RatingStars rating={deal.rating} />
                   <span className="text-gray-500">(59 Ratings)</span>
                 </div>
               </div>
-              <div className="stagger xl:basis-[35%] md:w-[90%] md:mx-auto">
+              <div className="stagger md:mx-auto md:w-[90%] xl:basis-[35%]">
                 <DealActions dealItem={deal} />
-                <div className="xl:px-5 mt-7 flex gap-4 items-center justify-center">
+                <div className="mt-7 flex items-center justify-center gap-4 xl:px-5">
                   <span className="font-medium">Share This Deal:</span>
                   <div className="flex gap-4 text-xl text-gray-600">
-                    <Link href={""} className="hover:scale-125 transition-transform ease-in-out duration-100" aria-label="facebook">
+                    <Link href={""} className="transition-transform duration-100 ease-in-out hover:scale-125" aria-label="facebook">
                       <FaFacebookF />
                     </Link>
-                    <Link href={""} className="hover:scale-125 transition-transform ease-in-out duration-100" aria-label="twitter">
+                    <Link href={""} className="transition-transform duration-100 ease-in-out hover:scale-125" aria-label="twitter">
                       <FaTwitter />
                     </Link>
-                    <Link href={""} className="hover:scale-125 transition-transform ease-in-out duration-100" aria-label="instagram">
+                    <Link href={""} className="transition-transform duration-100 ease-in-out hover:scale-125" aria-label="instagram">
                       <FaInstagram />
                     </Link>
-                    <Link href={""} className="hover:scale-125 transition-transform ease-in-out duration-100" aria-label="tiktok">
+                    <Link href={""} className="transition-transform duration-100 ease-in-out hover:scale-125" aria-label="tiktok">
                       <FaTiktok />
                     </Link>
-                    <Link href={""} className="hover:scale-125 transition-transform ease-in-out duration-100" aria-label="whatsapp">
+                    <Link href={""} className="transition-transform duration-100 ease-in-out hover:scale-125" aria-label="whatsapp">
                       <FaWhatsapp />
                     </Link>
                   </div>
@@ -163,10 +163,10 @@ const DealItem = ({ params }) => {
       </SnapSection>
       <SnapSection nextSectionTitle={"Reviews"} className="pt-20">
         <StaggerContainer selector=".stagger" viewportAmount={0.1} yOffset={50} duration={0.5} staggerChildren={0.12} delayChildren={0.1}>
-          <h1 className="stagger text-2xl sm:text-3xl font-extrabold mt-6 mb-11 text-center capitalize">About this deal</h1>
-          <section className="px-6 py-3 lg:px-28 xl:px-32 2xl:px-14 max-w-[1328px] mx-auto space-y-10">
-            <div className="stagger max-w-3xl mx-auto">
-              <h2 className="text-2xl font-bold mb-3">Description</h2>
+          <h1 className="stagger mb-11 mt-6 text-center text-2xl font-extrabold capitalize sm:text-3xl">About this deal</h1>
+          <section className="mx-auto max-w-[1328px] space-y-10 px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
+            <div className="stagger mx-auto max-w-3xl">
+              <h2 className="mb-3 text-2xl font-bold">Description</h2>
               <div>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias reprehenderit totam, quasi quae libero assumenda eligendi laborum
                 iure sunt voluptates itaque ducimus quos esse maiores dolores aut fugiat iste? Nisi, reprehenderit! Deserunt consequuntur nulla minus
@@ -176,22 +176,22 @@ const DealItem = ({ params }) => {
                 sunt alias ipsum voluptatibus tempora perferendis unde, fugiat itaque officia praesentium ratione, necessitatibus veritatis.
               </div>
             </div>
-            <div className="stagger max-w-3xl mx-auto">
-              <h2 className="text-2xl font-bold mb-3">Additional Infomation</h2>
+            <div className="stagger mx-auto max-w-3xl">
+              <h2 className="mb-3 text-2xl font-bold">Additional Infomation</h2>
               <div>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit molestiae facere, placeat neque ullam asperiores voluptatem ab. Iure
                 beatae rerum debitis ducimus. Maiores corporis quisquam tempore quis, minima nisi at cupiditate doloremque, facere nulla impedit
                 nostrum dolorum rem? Aliquid repudiandae magnam natus non voluptates incidunt reprehenderit. Fugit qui tempora eaque!
               </div>
             </div>
-            <div className="stagger max-w-3xl mx-auto">
-              <h2 className="text-2xl font-bold mb-3">About Vendor</h2>
+            <div className="stagger mx-auto max-w-3xl">
+              <h2 className="mb-3 text-2xl font-bold">About Vendor</h2>
               <div>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, inventore esse aliquam molestias quae repellendus incidunt unde nulla
                 necessitatibus sint error accusantium possimus ad non enim molestiae nostrum quod quas?
               </div>
-              <div className="aspect-video mt-6 rounded-md overflow-hidden">
-                <video controls className="w-full h-full object-cover">
+              <div className="mt-6 aspect-video overflow-hidden rounded-md">
+                <video controls className="h-full w-full object-cover">
                   <source src="/videos/hero-video.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -201,14 +201,14 @@ const DealItem = ({ params }) => {
       </SnapSection>
       <SnapSection nextSectionTitle={"Similar deals"} className="pt-20">
         <StaggerContainer selector=".stagger" viewportAmount={0.1} yOffset={50} duration={0.5} staggerChildren={0.12} delayChildren={0.1}>
-          <h1 className="stagger text-2xl sm:text-3xl font-extrabold mt-6 mb-11 text-center capitalize">Customer Reviews</h1>
-          <section className="px-6 py-3 lg:px-28 xl:px-32 2xl:px-14 max-w-[1328px] mx-auto ">
-            <div className="stagger max-w-3xl mx-auto flex gap-4 items-center mb-10">
+          <h1 className="stagger mb-11 mt-6 text-center text-2xl font-extrabold capitalize sm:text-3xl">Customer Reviews</h1>
+          <section className="mx-auto max-w-[1328px] px-6 py-3 lg:px-28 xl:px-32 2xl:px-14 ">
+            <div className="stagger mx-auto mb-10 flex max-w-3xl items-center gap-4">
               <h2 className="text-5xl font-bold">{deal.rating}</h2>
               <RatingStars rating={deal.rating} className={"text-2xl"} />
               <div>54 Ratings</div>
             </div>
-            <div className="stagger max-w-3xl mx-auto space-y-6">
+            <div className="stagger mx-auto max-w-3xl space-y-6">
               <div className="space-y-3">
                 <div className="flex items-center gap-4">
                   <Avatar>
@@ -219,7 +219,7 @@ const DealItem = ({ params }) => {
                   <RatingStars rating={2.1} />
                   <span className="ml-auto">July 4, 2023</span>
                 </div>
-                <div className="bg-white rounded-md shadow p-3">
+                <div className="rounded-md bg-white p-3 shadow">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, sint non. Odio veritatis perferendis ipsa dolorum corrupti molestiae
                   debitis cupiditate?
                 </div>
@@ -234,7 +234,7 @@ const DealItem = ({ params }) => {
                   <RatingStars rating={4.4} />
                   <span className="ml-auto">July 4, 2023</span>
                 </div>
-                <div className="bg-white rounded-md shadow p-3">
+                <div className="rounded-md bg-white p-3 shadow">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, sint non. Odio veritatis perferendis ipsa dolorum corrupti molestiae
                   debitis cupiditate?
                 </div>
@@ -249,7 +249,7 @@ const DealItem = ({ params }) => {
                   <RatingStars rating={2.7} />
                   <span className="ml-auto">July 4, 2023</span>
                 </div>
-                <div className="bg-white rounded-md shadow p-3">
+                <div className="rounded-md bg-white p-3 shadow">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, sint non. Odio veritatis perferendis ipsa dolorum corrupti molestiae
                   debitis cupiditate?
                 </div>
@@ -264,7 +264,7 @@ const DealItem = ({ params }) => {
                   <RatingStars rating={3.1} />
                   <span className="ml-auto">July 4, 2023</span>
                 </div>
-                <div className="bg-white rounded-md shadow p-3">
+                <div className="rounded-md bg-white p-3 shadow">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, sint non. Odio veritatis perferendis ipsa dolorum corrupti molestiae
                   debitis cupiditate?
                 </div>
@@ -279,16 +279,16 @@ const DealItem = ({ params }) => {
                   <RatingStars rating={1.1} />
                   <span className="ml-auto">July 4, 2023</span>
                 </div>
-                <div className="bg-white rounded-md shadow p-3">
+                <div className="rounded-md bg-white p-3 shadow">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, sint non. Odio veritatis perferendis ipsa dolorum corrupti molestiae
                   debitis cupiditate?
                 </div>
               </div>
             </div>
-            <div className="max-w-3xl mx-auto">
+            <div className="mx-auto max-w-3xl">
               <Link
                 href={"/"}
-                className="block border-2 border-red-400 hover:bg-red-500 hover:text-white py-2 text-center sm:w-[50%] xl:w-[30%] mx-auto rounded-full font-bold mt-8"
+                className="mx-auto mt-8 block rounded-full border-2 border-red-400 py-2 text-center font-bold hover:bg-red-500 hover:text-white sm:w-[50%] xl:w-[30%]"
               >
                 Load More
               </Link>
@@ -297,11 +297,11 @@ const DealItem = ({ params }) => {
         </StaggerContainer>
       </SnapSection>
       <SnapSection nextSectionTitle={"Footer"} className="pt-20">
-        <div className="mt-6 mb-11 text-center capitalize">
-          <h1 className="text-2xl sm:text-3xl font-extrabold">Similar Deals</h1>
+        <div className="mb-11 mt-6 text-center capitalize">
+          <h1 className="text-2xl font-extrabold sm:text-3xl">Similar Deals</h1>
         </div>
-        <section className="px-6 py-3 lg:px-28 xl:px-32 2xl:px-14 max-w-[1328px] mx-auto">
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-9">
+        <section className="mx-auto max-w-[1328px] px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
+          <div className="grid gap-x-6 gap-y-9 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
             {dealOfTheDay
               .map((item) => (
                 <Link href={`/deals/${item.id}`} key={item.id}>
@@ -317,7 +317,7 @@ const DealItem = ({ params }) => {
               ))
               .slice(0, 5)}
           </div>
-          <Link href={"/"} className="block border-2 border-red-400 py-2 text-center sm:w-[50%] xl:w-[30%] mx-auto rounded-full font-bold mt-12">
+          <Link href={"/"} className="mx-auto mt-12 block rounded-full border-2 border-red-400 py-2 text-center font-bold sm:w-[50%] xl:w-[30%]">
             See More
           </Link>
         </section>

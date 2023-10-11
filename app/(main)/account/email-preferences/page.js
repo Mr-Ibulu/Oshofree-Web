@@ -4,7 +4,7 @@ import EmailPreferenceForm from "@/components/UserAccountPage/EmailPreferenceFor
 const EmailPreferences = () => {
   return (
     <>
-      <h2 className="text-xl sm:text-2xl font-medium">Email Preferences</h2>
+      <h2 className="text-xl font-medium sm:text-2xl">Email Preferences</h2>
       <div className="my-6">
         <EmailPreferenceForm />
       </div>

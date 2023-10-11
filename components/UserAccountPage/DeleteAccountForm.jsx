@@ -17,12 +17,12 @@ const DeleteAccountForm = ({ className }) => {
           <Form.Control asChild>
             <input type="checkbox" value={isChecked} onChange={handleCheck} className="min-w-[20px]" />
           </Form.Control>
-          <Form.Label className="text-sm font-medium ml-2">Yes, please erase my Oshofree account and all of my personal data permanently</Form.Label>
+          <Form.Label className="ml-2 text-sm font-medium">Yes, please erase my Oshofree account and all of my personal data permanently</Form.Label>
         </Form.Field>
         <Form.Submit asChild>
           <button
             disabled={!isChecked}
-            className="disabled:bg-gray-300 bg-red-600 hover:bg-red-700 text-white w-full max-w-lg py-2 rounded-full mt-10 font-medium uppercase"
+            className="mt-10 w-full max-w-lg rounded-full bg-red-600 py-2 font-medium uppercase text-white hover:bg-red-700 disabled:bg-gray-300"
           >
             Delete My Account
           </button>

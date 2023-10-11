@@ -7,7 +7,6 @@ export function generateStaticParams() {
   return completeOrders.map((order) => ({ orderId: order.id }));
 }
 
-
 const CompletedOrderDetails = ({ params }) => {
   const order = orders.find((order) => order.id === params.orderId);
   return <OrderDetails order={order} />;

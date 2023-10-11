@@ -11,9 +11,9 @@ const CategoryList = ({ rootCategory }) => {
         {rootCategory.title === "Highlight" ? (
           ""
         ) : (
-          <Link href={rootCategory.slug} className="flex items-center justify-between mt-10 font-bold text-2xl sm:text-3xl mb-3">
+          <Link href={rootCategory.slug} className="mb-3 mt-10 flex items-center justify-between text-2xl font-bold sm:text-3xl">
             <h2>{rootCategory.title}</h2>
-            <div className="text-base sm:text-lg text-red-600 flex items-center gap-2">
+            <div className="flex items-center gap-2 text-base text-red-600 sm:text-lg">
               <span>View All</span> <AiOutlineRight />
             </div>
           </Link>
@@ -23,17 +23,17 @@ const CategoryList = ({ rootCategory }) => {
         {findSubCategories(rootCategory).map((subCat) => (
           <Accordion type="single" collapsible key={subCat.title}>
             <AccordionItem value="subcategories">
-              <AccordionTrigger className="sm:text-lg font-bold">{subCat.title}</AccordionTrigger>
+              <AccordionTrigger className="font-bold sm:text-lg">{subCat.title}</AccordionTrigger>
               <AccordionContent>
                 <Link
                   href={rootCategory.slug === "highlight" ? "" : `${rootCategory.slug}/${subCat.slug}`}
                   key={subCat.title}
-                  className="block font-semibold sm:text-lg py-1 my-2"
+                  className="my-2 block py-1 font-semibold sm:text-lg"
                 >
                   All {subCat.title} Deals
                 </Link>
                 {findSubCategories(subCat).map((innerCat) => (
-                  <Link href={`${rootCategory.slug}/${innerCat.slug}`} key={innerCat.title} className="block sm:text-lg py-1 my-2 font-medium">
+                  <Link href={`${rootCategory.slug}/${innerCat.slug}`} key={innerCat.title} className="my-2 block py-1 font-medium sm:text-lg">
                     {innerCat.title}
                   </Link>
                 ))}

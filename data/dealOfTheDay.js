@@ -14,7 +14,7 @@ import cleaning from "@/public/images/cleaning.jpg";
 export const dealOfTheDay = [
   {
     id: 1,
-    type:"service",
+    type: "service",
     image: spar,
     isNew: true,
     rating: 4.2,
@@ -24,7 +24,7 @@ export const dealOfTheDay = [
   },
   {
     id: 2,
-    type:"service",
+    type: "service",
     image: haircut,
     isNew: false,
     rating: 4,
@@ -34,7 +34,7 @@ export const dealOfTheDay = [
   },
   {
     id: 3,
-    type:"service",
+    type: "service",
     image: cleaning,
     isNew: true,
     rating: 2.2,
@@ -44,7 +44,7 @@ export const dealOfTheDay = [
   },
   {
     id: 4,
-    type:"product",
+    type: "product",
     image: electronics,
     isNew: true,
     rating: 2.3,
@@ -54,7 +54,7 @@ export const dealOfTheDay = [
   },
   {
     id: 5,
-    type:"product",
+    type: "product",
     image: fashion,
     isNew: false,
     rating: 1,
@@ -64,7 +64,7 @@ export const dealOfTheDay = [
   },
   {
     id: 6,
-    type:"product",
+    type: "product",
     image: food2,
     isNew: true,
     rating: 2.3,
@@ -74,7 +74,7 @@ export const dealOfTheDay = [
   },
   {
     id: 7,
-    type:"service",
+    type: "service",
     image: resort,
     isNew: false,
     rating: 5,
@@ -84,7 +84,7 @@ export const dealOfTheDay = [
   },
   {
     id: 8,
-    type:"product",
+    type: "product",
     image: fashion2,
     isNew: true,
     rating: 4,
@@ -94,7 +94,7 @@ export const dealOfTheDay = [
   },
   {
     id: 9,
-    type:"service",
+    type: "service",
     image: gym,
     isNew: true,
     rating: 3.2,
@@ -104,7 +104,7 @@ export const dealOfTheDay = [
   },
   {
     id: 10,
-    type:"service",
+    type: "service",
     image: amusement,
     isNew: false,
     rating: 4.2,
@@ -114,7 +114,7 @@ export const dealOfTheDay = [
   },
   {
     id: 11,
-    type:"service",
+    type: "service",
     image: hotel,
     isNew: false,
     rating: 3.5,
@@ -124,7 +124,7 @@ export const dealOfTheDay = [
   },
   {
     id: 12,
-    type:"product",
+    type: "product",
     image: food,
     isNew: true,
     rating: 5,

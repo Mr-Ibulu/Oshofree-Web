@@ -9,7 +9,7 @@ const NavigationLink = ({ href, title }) => {
   return (
     <Link
       href={`${href}`}
-      className={`block hover:scale-105 transition-transform duration-100 ease-linear ${pathname === `${href}` ? "text-sky-700 font-semibold" : ""}`}
+      className={`block transition-transform duration-100 ease-linear hover:scale-105 ${pathname === `${href}` ? "font-semibold text-sky-700" : ""}`}
     >
       {title}
     </Link>

@@ -8,7 +8,7 @@ const OrderStatusBadge = ({ variant, message }) => {
       {variant === "pending" && (
         <Badge className={"space-x-2 bg-sky-600"}>
           <span>{message}</span>
-          <span className="border-gray-300 block h-5 w-5 animate-spin rounded-full border-4 border-t-white" />
+          <span className="block h-5 w-5 animate-spin rounded-full border-4 border-gray-300 border-t-white" />
         </Badge>
       )}
       {variant === "complete" && (

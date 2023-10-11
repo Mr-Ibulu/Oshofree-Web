@@ -11,7 +11,7 @@ const Wishlist = () => {
   return (
     <>
       <SnapSection nextSectionTitle={"Footer"} className="pt-20">
-        <div className="px-6 py-3 lg:px-28 xl:px-32 2xl:px-14 max-w-[1328px] mx-auto">
+        <div className="mx-auto max-w-[1328px] px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
           <SearchbarHeader />
           <StaggerContainer
             selector=".stagger"
@@ -22,20 +22,20 @@ const Wishlist = () => {
             staggerChildren={0.12}
             delayChildren={0}
           >
-            <nav className="stagger text-sm flex mb-7">
+            <nav className="stagger mb-7 flex text-sm">
               {["Home", "Cart"].map((breadcrumb, index, arr) => (
                 <div className="inline-flex items-center text-blue-900" key={index}>
                   <Link href={""} className="hover:underline">
                     {breadcrumb}
                   </Link>
-                  {index !== arr.length - 1 ? <MdOutlineChevronRight className="text-lg mx-2" /> : ""}
+                  {index !== arr.length - 1 ? <MdOutlineChevronRight className="mx-2 text-lg" /> : ""}
                 </div>
               ))}
             </nav>
-            <h1 className="stagger font-bold capitalize text-2xl sm:text-4xl mb-6 [word-spacing:3px] leading-[3rem]">Your Saved Items</h1>
+            <h1 className="stagger mb-6 text-2xl font-bold capitalize leading-[3rem] [word-spacing:3px] sm:text-4xl">Your Saved Items</h1>
           </StaggerContainer>
-          <section className="px-6 py-3 overflow-hidden max-w-[1328px] mx-auto">
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-9">
+          <section className="mx-auto max-w-[1328px] overflow-hidden px-6 py-3">
+            <div className="grid gap-x-6 gap-y-9 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
               {dealOfTheDay
                 .map((item) => (
                   <div key={item.id}>
@@ -49,11 +49,11 @@ const Wishlist = () => {
                         newPrice={item.newPrice}
                       />
                     </Link>
-                    <div className="flex items-center gap-9 mt-4 justify-center">
-                      <button className="bg-sky-700 px-2 py-1 text-white rounded-md text-sm xl:text-xs font-medium hover:scale-110 transition-transform duration-100 ease-in-out">
+                    <div className="mt-4 flex items-center justify-center gap-9">
+                      <button className="rounded-md bg-sky-700 px-2 py-1 text-sm font-medium text-white transition-transform duration-100 ease-in-out hover:scale-110 xl:text-xs">
                         Add to Cart
                       </button>
-                      <button className="border border-red-500 hover:bg-red-500 hover:text-white px-2 py-1 rounded-md text-sm xl:text-xs font-medium hover:scale-110 transition-transform duration-100 ease-in-out">
+                      <button className="rounded-md border border-red-500 px-2 py-1 text-sm font-medium transition-transform duration-100 ease-in-out hover:scale-110 hover:bg-red-500 hover:text-white xl:text-xs">
                         Remove
                       </button>
                     </div>

@@ -13,26 +13,26 @@ import ProfileHoverMenu from "./ProfileHoverMenu";
 
 const Navbar = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 w-full z-10 backdrop-blur bg-transparent">
-      <div className="flex px-4 sm:px-7 lg:px-14 2xl:px-0 py-4 justify-between max-w-[1328px] mx-auto items-center">
-        <div className="h-full lg:h-[100dvh] self-start absolute left-0 w-14 sm:w-24 -translate-y-4 ">
-          <div className="flex flex-col items-center h-full relative">
+    <header className="fixed left-0 right-0 top-0 z-10 w-full bg-transparent backdrop-blur">
+      <div className="mx-auto flex max-w-[1328px] items-center justify-between px-4 py-4 sm:px-7 lg:px-14 2xl:px-0">
+        <div className="absolute left-0 h-full w-14 -translate-y-4 self-start sm:w-24 lg:h-[100dvh] ">
+          <div className="relative flex h-full flex-col items-center">
             <Sheet>
               <SheetTrigger asChild>
-                <button className="text-3xl sm:text-4xl mt-6 focus:outline-none">
+                <button className="mt-6 text-3xl focus:outline-none sm:text-4xl">
                   <span className="sr-only">Menu</span>
                   <MdMenu />
-                  <div className="hidden sm:block text-xs">Menu</div>
+                  <div className="hidden text-xs sm:block">Menu</div>
                 </button>
               </SheetTrigger>
               <SheetContent side={"left"} className="w-[80%] rounded-r-2xl p-0">
                 <Sidebar />
               </SheetContent>
             </Sheet>
-            <section className="hidden lg:block text-lg absolute top-1/2 -translate-y-1/2 text-gray-600">
+            <section className="absolute top-1/2 hidden -translate-y-1/2 text-lg text-gray-600 lg:block">
               <Link
                 href="/"
-                className="my-3 block p-2 rounded-full hover:scale-150 transition-transform ease-in-out duration-150 hover:text-[#1877F2]"
+                className="my-3 block rounded-full p-2 transition-transform duration-150 ease-in-out hover:scale-150 hover:text-[#1877F2]"
               >
                 <FaFacebookF />
               </Link>
@@ -40,7 +40,7 @@ const Navbar = () => {
                 href="https://twitter.com/oshofreeapp"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="my-3 block p-2 rounded-full hover:scale-150 transition-transform ease-in-out duration-150 hover:text-[#1DA1F2]"
+                className="my-3 block rounded-full p-2 transition-transform duration-150 ease-in-out hover:scale-150 hover:text-[#1DA1F2]"
               >
                 <FaTwitter />
               </Link>
@@ -48,7 +48,7 @@ const Navbar = () => {
                 href="https://instagram.com/oshofreeapp"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="my-3 block p-2 rounded-full hover:scale-150 transition-transform ease-in-out duration-150 hover:text-[#D62976]"
+                className="my-3 block rounded-full p-2 transition-transform duration-150 ease-in-out hover:scale-150 hover:text-[#D62976]"
               >
                 <FaInstagram />
               </Link>
@@ -56,7 +56,7 @@ const Navbar = () => {
                 href="https://www.tiktok.com/@oshofreeapp"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="my-3 block p-2 rounded-full hover:scale-150 transition-transform ease-in-out duration-150 hover:text-[#ff0050]"
+                className="my-3 block rounded-full p-2 transition-transform duration-150 ease-in-out hover:scale-150 hover:text-[#ff0050]"
               >
                 <FaTiktok />
               </Link>
@@ -67,42 +67,42 @@ const Navbar = () => {
           <Image src={logo} alt="logo" priority className="w-24 xs:w-28 sm:w-32" />
         </Link>
 
-        <nav className="absolute left-1/2 -translate-x-1/2 hidden lg:flex gap-6 font-medium text-sm">
+        <nav className="absolute left-1/2 hidden -translate-x-1/2 gap-6 text-sm font-medium lg:flex">
           <HoverCard openDelay={50}>
             <HoverCardTrigger asChild>
               <Link
                 href={"/categories"}
-                className="group hover:underline decoration-red-500 decoration-2 font-extrabold text-lg underline-offset-4 flex items-center gap-1"
+                className="group flex items-center gap-1 text-lg font-extrabold decoration-red-500 decoration-2 underline-offset-4 hover:underline"
               >
                 Categories
                 <span className="relative flex h-3 w-3 items-center justify-center">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75"></span>
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500"></span>
                 </span>
               </Link>
             </HoverCardTrigger>
-            <HoverCardContent className="w-fit hidden xl:block">
+            <HoverCardContent className="hidden w-fit xl:block">
               <CategoriesHoverMenu />
             </HoverCardContent>
           </HoverCard>
-          <Link href={"/wishlist"} className="hover:underline decoration-red-500 decoration-2 underline-offset-4 flex items-center gap-1">
+          <Link href={"/wishlist"} className="flex items-center gap-1 decoration-red-500 decoration-2 underline-offset-4 hover:underline">
             <MdFavoriteBorder className="text-lg" />
             My Wishlist
           </Link>
-          <Link href={"/sell"} className="hover:underline decoration-red-500 decoration-2 underline-offset-4 flex items-center gap-1">
+          <Link href={"/sell"} className="flex items-center gap-1 decoration-red-500 decoration-2 underline-offset-4 hover:underline">
             Sell On Oshofree
           </Link>
-          <Link href={"/"} className="hidden hover:underline decoration-red-500 decoration-2 underline-offset-4 xl:flex items-center gap-1">
+          <Link href={"/"} className="hidden items-center gap-1 decoration-red-500 decoration-2 underline-offset-4 hover:underline xl:flex">
             Blog
           </Link>
-          <Link href={"/"} className="hover:underline decoration-red-500 decoration-2 underline-offset-4 flex items-center gap-1">
+          <Link href={"/"} className="flex items-center gap-1 decoration-red-500 decoration-2 underline-offset-4 hover:underline">
             Help
           </Link>
         </nav>
-        <section className="flex justify-between gap-5 lg:gap-4 p-2 font-semibold">
-          <Link href={"/cart"} className="inline-flex items-center gap-1 relative hover:scale-105 transition-transform duration-100 ease-in-out">
+        <section className="flex justify-between gap-5 p-2 font-semibold lg:gap-4">
+          <Link href={"/cart"} className="relative inline-flex items-center gap-1 transition-transform duration-100 ease-in-out hover:scale-105">
             <MdOutlineShoppingCart className="text-2xl sm:text-3xl" />
-            <span className="inline-flex absolute top-0 right-0 translate-x-2 -translate-y-2 items-center justify-center rounded-full h-[18px] w-[18px] px-1 py-1 text-white leading-4 bg-red-500 text-[10px]">
+            <span className="absolute right-0 top-0 inline-flex h-[18px] w-[18px] -translate-y-2 translate-x-2 items-center justify-center rounded-full bg-red-500 px-1 py-1 text-[10px] leading-4 text-white">
               {cart.length}
             </span>
           </Link>
@@ -112,13 +112,13 @@ const Navbar = () => {
                 href={"/login"}
                 aria-label="Login"
                 scroll={false}
-                className="inline-flex items-center gap-2 hover:scale-105 transition-transform duration-100 ease-in-out"
+                className="inline-flex items-center gap-2 transition-transform duration-100 ease-in-out hover:scale-105"
               >
                 <MdPersonOutline className="text-2xl sm:text-3xl" />
-                <div className="text-xs hidden sm:block sm:text-sm">Sign In</div>
+                <div className="hidden text-xs sm:block sm:text-sm">Sign In</div>
               </Link>
             </HoverCardTrigger>
-            <HoverCardContent className="w-72 px-0 hidden xl:block">
+            <HoverCardContent className="hidden w-72 px-0 xl:block">
               <ProfileHoverMenu />
             </HoverCardContent>
           </HoverCard>

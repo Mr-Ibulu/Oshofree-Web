@@ -9,12 +9,12 @@ import RegisterationForm from "@/components/auth/RegisterationForm";
 
 const Register = () => {
   return (
-    <div className="bg-gray-100 h-[100dvh] w-full flex justify-center overflow-y-auto py-5 xl:scrollbar-thin scrollbar-thumb-red-500 scrollbar-track-red-200 scrollbar-track-rounded-full scrollbar-thumb-rounded-full">
-      <div className="bg-white w-[95%] h-fit sm:max-w-xl xl:max-w-6xl rounded-lg grid xl:grid-cols-2 overflow-hidden my-auto">
+    <div className="flex h-[100dvh] w-full justify-center overflow-y-auto bg-gray-100 py-5 scrollbar-track-red-200 scrollbar-thumb-red-500 scrollbar-track-rounded-full scrollbar-thumb-rounded-full xl:scrollbar-thin">
+      <div className="my-auto grid h-fit w-[95%] overflow-hidden rounded-lg bg-white sm:max-w-xl xl:max-w-6xl xl:grid-cols-2">
         <div className="p-6 sm:px-10">
           <Link href={"/"} className="mb-10 inline-flex items-center justify-between">
             <Image src={logo} alt="logo" priority className="w-[35%] sm:w-[25%] xl:w-[20%]" />
-            <div className="flex items-center gap-2 hover:underline text-sky-700">
+            <div className="flex items-center gap-2 text-sky-700 hover:underline">
               <MdOutlineHome />
               <span className="text-xs">Return Home</span>
             </div>
@@ -27,7 +27,7 @@ const Register = () => {
             <RegisterationForm />
           </div>
         </div>
-        <div className="hidden lg:block relative">
+        <div className="relative hidden lg:block">
           <ImageWithPlaceholder src={vendor} alt="signup-image-carousel" fill={true} className={"object-cover"} />
         </div>
       </div>

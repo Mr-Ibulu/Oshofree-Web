@@ -15,7 +15,7 @@ const Cart = () => {
   return (
     <>
       <SnapSection nextSectionTitle={"You might also like"} className="pt-20">
-        <div className="px-6 py-3 lg:px-28 xl:px-32 2xl:px-14 max-w-[1328px] mx-auto">
+        <div className="mx-auto max-w-[1328px] px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
           <StaggerContainer
             selector=".stagger"
             viewportAmount={0.1}
@@ -25,34 +25,34 @@ const Cart = () => {
             staggerChildren={0.12}
             delayChildren={0}
           >
-            <nav className="stagger text-sm flex mb-7">
+            <nav className="stagger mb-7 flex text-sm">
               {["Home", "Cart"].map((breadcrumb, index, arr) => (
                 <div className="inline-flex items-center text-blue-900" key={index}>
                   <Link href={""} className="hover:underline">
                     {breadcrumb}
                   </Link>
-                  {index !== arr.length - 1 ? <MdOutlineChevronRight className="text-lg mx-2" /> : ""}
+                  {index !== arr.length - 1 ? <MdOutlineChevronRight className="mx-2 text-lg" /> : ""}
                 </div>
               ))}
             </nav>
-            <h1 className="stagger font-bold capitalize text-2xl sm:text-4xl mb-10 [word-spacing:3px] leading-[3rem]">
+            <h1 className="stagger mb-10 text-2xl font-bold capitalize leading-[3rem] [word-spacing:3px] sm:text-4xl">
               Your Cart ({cart.length} Items)
             </h1>
-            <div className="flex flex-col md:flex-row gap-10">
-              <div className="stagger basis-[60%] xl:basis-[70%] space-y-10">
+            <div className="flex flex-col gap-10 md:flex-row">
+              <div className="stagger basis-[60%] space-y-10 xl:basis-[70%]">
                 {cart.map((cartItem) => (
                   <div className="bg-white" key={cartItem.deal.id}>
-                    <div className="flex flex-col xl:flex-row flex-wrap items-start gap-y-4 gap-x-2">
+                    <div className="flex flex-col flex-wrap items-start gap-x-2 gap-y-4 xl:flex-row">
                       <Link href={`/deals/${cartItem.deal.id}`}>
                         <div className="flex space-x-4">
-                          <div className="relative w-44 rounded-md overflow-hidden">
+                          <div className="relative w-44 overflow-hidden rounded-md">
                             <ImageWithPlaceholder src={cartItem.deal.image} />
                           </div>
-                          <div className="text-sm sm:text-base font-semibold max-w-xs py-2">{cartItem.deal.description}</div>
+                          <div className="max-w-xs py-2 text-sm font-semibold sm:text-base">{cartItem.deal.description}</div>
                         </div>
                       </Link>
 
-                      <div className="flex grow justify-center py-2 gap-6 sm:gap-14 xl:gap-6 mx-auto">
+                      <div className="mx-auto flex grow justify-center gap-6 py-2 sm:gap-14 xl:gap-6">
                         <div className="flex items-center gap-1">
                           <div className="font-medium">Qty:</div>
                           <Select defaultValue={`${cartItem.quantity}`}>
@@ -70,27 +70,27 @@ const Cart = () => {
                         </div>
                         <div>
                           <div className="flex items-center gap-3">
-                            <div className="old-price line-through text-gray-500 font-medium text-sm">
+                            <div className="old-price text-sm font-medium text-gray-500 line-through">
                               <span>&#8358;{cartItem.deal.prevPrice}</span>
                             </div>
-                            <div className="new-price font-bold text-lg text-red-600">
+                            <div className="new-price text-lg font-bold text-red-600">
                               <span>&#8358;{cartItem.deal.newPrice}</span>
                             </div>
                           </div>
-                          <div className="text-sm mt-2 font-medium text-sky-700">
+                          <div className="mt-2 text-sm font-medium text-sky-700">
                             You Save <span>&#8358;{cartItem.deal.prevPrice - cartItem.deal.newPrice}</span>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div className="flex items-center justify-center gap-8 mt-4">
-                      <button className="flex items-center text-sm gap-2 p-2 font-medium hover:scale-110 transition-transform duration-100 ease-in-out">
+                    <div className="mt-4 flex items-center justify-center gap-8">
+                      <button className="flex items-center gap-2 p-2 text-sm font-medium transition-transform duration-100 ease-in-out hover:scale-110">
                         Remove
                         <div className="text-xl text-red-500">
                           <MdDelete />
                         </div>
                       </button>
-                      <button className="flex items-center text-sm gap-2 p-2 font-medium hover:scale-110 transition-transform duration-100 ease-in-out">
+                      <button className="flex items-center gap-2 p-2 text-sm font-medium transition-transform duration-100 ease-in-out hover:scale-110">
                         Save For Later
                         <div className="text-xl text-sky-700">
                           <MdFavoriteBorder />
@@ -102,7 +102,7 @@ const Cart = () => {
                 ))}
               </div>
               <div className="stagger basis-[40%] xl:basis-[30%] ">
-                <div className="shadow rounded-md p-4 bg-white max-h-screen sticky top-0">
+                <div className="sticky top-0 max-h-screen rounded-md bg-white p-4 shadow">
                   <div className="flex flex-col gap-3">
                     <div className="flex items-center justify-between font-bold">
                       <span className="text-lg">Order Summary</span> <span>{cart.length} Items</span>
@@ -115,14 +115,14 @@ const Cart = () => {
                     </div>
                   </div>
                   <Separator className="mt-6" />
-                  <div className="flex items-center justify-between font-bold mt-3">
+                  <div className="mt-3 flex items-center justify-between font-bold">
                     <span className="text-lg">Total</span> <span>&#8358;{cartSubtotal + 200}</span>
                   </div>
                   <Separator className="mt-6" />
                   <div className="mt-3">
                     <Link
                       href={""}
-                      className="bg-red-500 block text-center text-white w-full py-3 rounded-md focus:outline-none hover:scale-105 transition-transform duration-200 ease-in-out"
+                      className="block w-full rounded-md bg-red-500 py-3 text-center text-white transition-transform duration-200 ease-in-out hover:scale-105 focus:outline-none"
                     >
                       Proceed To Checkout
                     </Link>
@@ -134,11 +134,11 @@ const Cart = () => {
         </div>
       </SnapSection>
       <SnapSection nextSectionTitle={"Footer"} className="pt-20">
-        <div className="mt-6 mb-11 text-center capitalize">
-          <h1 className="text-2xl sm:text-3xl font-extrabold">You Might Also Like</h1>
+        <div className="mb-11 mt-6 text-center capitalize">
+          <h1 className="text-2xl font-extrabold sm:text-3xl">You Might Also Like</h1>
         </div>
-        <section className="px-6 py-3 lg:px-28 xl:px-32 2xl:px-14 overflow-hidden max-w-[1328px] mx-auto">
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-9">
+        <section className="mx-auto max-w-[1328px] overflow-hidden px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
+          <div className="grid gap-x-6 gap-y-9 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
             {dealOfTheDay
               .map((item) => (
                 <Link href={`/deals/${item.id}`} key={item.id}>
@@ -154,7 +154,7 @@ const Cart = () => {
               ))
               .slice(0, 5)}
           </div>
-          <Link href={"/"} className="block border-2 border-red-400 py-2 text-center sm:w-[50%] xl:w-[30%] mx-auto rounded-full font-bold mt-12">
+          <Link href={"/"} className="mx-auto mt-12 block rounded-full border-2 border-red-400 py-2 text-center font-bold sm:w-[50%] xl:w-[30%]">
             See More
           </Link>
         </section>

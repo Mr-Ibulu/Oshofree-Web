@@ -16,7 +16,7 @@ import StaggerContainer from "../animations/StaggerContainer";
 
 const Sidebar = () => {
   return (
-    <div className=" overflow-y-scroll rounded-r-2xl h-full scrollbar-none">
+    <div className=" h-full overflow-y-scroll rounded-r-2xl scrollbar-none">
       <StaggerContainer
         selector="li"
         viewportAmount={0.2}
@@ -30,7 +30,7 @@ const Sidebar = () => {
         <ul>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/"} className="flex items-center h-12">
+              <Link scroll={false} href={"/"} className="flex h-12 items-center">
                 <div className="w-10">
                   <MdOutlineHome className="text-2xl" />
                 </div>
@@ -40,7 +40,7 @@ const Sidebar = () => {
           </li>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/login"} className="flex items-center h-12">
+              <Link scroll={false} href={"/login"} className="flex h-12 items-center">
                 <div className="w-10">
                   <MdPersonOutline className="text-2xl" />
                 </div>
@@ -50,7 +50,7 @@ const Sidebar = () => {
           </li>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/cart"} className="flex items-center h-12">
+              <Link scroll={false} href={"/cart"} className="flex h-12 items-center">
                 <div className="w-10">
                   <MdOutlineShoppingCart className="text-2xl" />
                 </div>
@@ -60,7 +60,7 @@ const Sidebar = () => {
           </li>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/account/account-info"} className="flex items-center h-12">
+              <Link scroll={false} href={"/account/account-info"} className="flex h-12 items-center">
                 <div className="w-10">
                   <MdOutlineManageAccounts className="text-2xl" />
                 </div>
@@ -70,7 +70,7 @@ const Sidebar = () => {
           </li>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/account/open-orders"} className="flex items-center h-12">
+              <Link scroll={false} href={"/account/open-orders"} className="flex h-12 items-center">
                 <div className="w-10">
                   <MdOutlineShoppingBag className="text-2xl" />
                 </div>
@@ -80,7 +80,7 @@ const Sidebar = () => {
           </li>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/account/wallet"} className="flex items-center h-12">
+              <Link scroll={false} href={"/account/wallet"} className="flex h-12 items-center">
                 <div className="w-10">
                   <MdOutlineAccountBalanceWallet className="text-2xl" />
                 </div>
@@ -93,7 +93,7 @@ const Sidebar = () => {
           </li>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/wishlist"} className="flex items-center h-12">
+              <Link scroll={false} href={"/wishlist"} className="flex h-12 items-center">
                 <div className="w-10">
                   <MdFavoriteBorder className="text-2xl" />
                 </div>
@@ -103,7 +103,7 @@ const Sidebar = () => {
           </li>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/logout"} className="flex items-center h-12">
+              <Link scroll={false} href={"/logout"} className="flex h-12 items-center">
                 <div className="w-10">
                   <MdOutlineLogout className="text-2xl" />
                 </div>
@@ -113,7 +113,7 @@ const Sidebar = () => {
           </li>
         </ul>
       </StaggerContainer>
-      <div className="bg-gray-200 h-3"></div>
+      <div className="h-3 bg-gray-200"></div>
       <StaggerContainer
         selector="li"
         viewportAmount={0.2}
@@ -125,13 +125,13 @@ const Sidebar = () => {
         className={"bg-white px-4 pt-4"}
       >
         <ul>
-          <li className="text-lg font-bold h-12 inline-flex items-center w-full">Our Categories</li>
+          <li className="inline-flex h-12 w-full items-center text-lg font-bold">Our Categories</li>
           {findAllRootCategories()
             .flatMap((mainCat) => findSubCategories(mainCat))
             .map((subCat) => (
               <li key={subCat.title}>
                 <SheetClose asChild>
-                  <Link scroll={false} href={`/${subCat.parent}/${subCat.slug}`} className="flex items-center h-12">
+                  <Link scroll={false} href={`/${subCat.parent}/${subCat.slug}`} className="flex h-12 items-center">
                     <div className="grow">{subCat.title}</div>
                   </Link>
                 </SheetClose>
@@ -140,14 +140,14 @@ const Sidebar = () => {
             .slice(3, 13)}
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/categories"} className="flex items-center h-12">
+              <Link scroll={false} href={"/categories"} className="flex h-12 items-center">
                 <div className="grow font-medium">Browse All Categories</div>
               </Link>
             </SheetClose>
           </li>
         </ul>
       </StaggerContainer>
-      <div className="bg-gray-200 h-3"></div>
+      <div className="h-3 bg-gray-200"></div>
       <StaggerContainer
         selector="li"
         viewportAmount={0.2}
@@ -161,21 +161,21 @@ const Sidebar = () => {
         <ul>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/sell"} className="flex items-center h-12">
+              <Link scroll={false} href={"/sell"} className="flex h-12 items-center">
                 <div className="grow">Sell On Oshofree</div>
               </Link>
             </SheetClose>
           </li>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/"} className="flex items-center h-12">
+              <Link scroll={false} href={"/"} className="flex h-12 items-center">
                 <div className="grow">Contact Us</div>
               </Link>
             </SheetClose>
           </li>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/"} className="flex items-center h-12">
+              <Link scroll={false} href={"/"} className="flex h-12 items-center">
                 <div className="grow">Blog</div>
               </Link>
             </SheetClose>

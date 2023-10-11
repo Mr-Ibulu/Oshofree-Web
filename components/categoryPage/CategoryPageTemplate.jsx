@@ -13,26 +13,26 @@ const CategoryPageTemplate = ({ category, results }) => {
   return (
     <>
       <SnapSection nextSectionTitle={"Footer"} className="pt-20">
-        <div className="px-6 pt-3 pb-1 lg:px-28 xl:px-32 2xl:px-0 max-w-screen-xl 3xl:max-w-[1400px] mx-auto">
+        <div className="mx-auto max-w-screen-xl px-6 pb-1 pt-3 lg:px-28 xl:px-32 2xl:px-0 3xl:max-w-[1400px]">
           <SearchbarHeader />
           <StaggerContainer selector=".stagger" viewportAmount={0} repeat={true} yOffset={20} duration={0.5} staggerChildren={0.12} delayChildren={0}>
-            <nav className="stagger text-xs sm:text-sm flex mb-3 sm:mb-7 overflow-x-scroll scrollbar-none">
+            <nav className="stagger mb-3 flex overflow-x-scroll text-xs scrollbar-none sm:mb-7 sm:text-sm">
               {["Home", "Local", "?????"].map((breadcrumb, index, arr) => (
-                <div className="inline-flex items-center text-sky-900 min-w-fit" key={index}>
+                <div className="inline-flex min-w-fit items-center text-sky-900" key={index}>
                   <Link href={""} className="hover:underline">
                     {breadcrumb}
                   </Link>
-                  {index !== arr.length - 1 ? <MdOutlineChevronRight className="text-lg mx-0 sm:mx-2" /> : ""}
+                  {index !== arr.length - 1 ? <MdOutlineChevronRight className="mx-0 text-lg sm:mx-2" /> : ""}
                 </div>
               ))}
             </nav>
             <TitleHead category={category} />
             <HorizontalCategoryList category={category} />
             <div className="flex gap-5">
-              <div className="stagger basis-[20%] hidden xl:block">
+              <div className="stagger hidden basis-[20%] xl:block">
                 <FilterCard category={category} />
               </div>
-              <div className="xl:basis-[80%] grid sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-9 mt-5">
+              <div className="mt-5 grid gap-x-6 gap-y-9 sm:grid-cols-2 md:grid-cols-3 xl:basis-[80%]">
                 {results.map((item) => (
                   <Link href={`/deals/${item.id}`} key={item.id}>
                     <DealCard

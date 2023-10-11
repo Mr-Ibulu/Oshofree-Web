@@ -24,12 +24,12 @@ const CategoriesHoverMenu = () => {
               <NavigationMenuTrigger className="font-bold">{rootCat.title}</NavigationMenuTrigger>
             </Link>
             <NavigationMenuContent>
-              <ul className="grid gap-5 grid-cols-4 p-6 w-[900px] ">
+              <ul className="grid w-[900px] grid-cols-4 gap-5 p-6 ">
                 {findSubCategories(rootCat).map((subCat) => (
                   <li key={subCat.title}>
                     <Link
                       href={`/${rootCat.slug}/${subCat.slug}`}
-                      className="font-semibold block py-2 hover:scale-105 transition-transform duration-100 ease-in-out"
+                      className="block py-2 font-semibold transition-transform duration-100 ease-in-out hover:scale-105"
                     >
                       {subCat.title}
                     </Link>
@@ -38,7 +38,7 @@ const CategoriesHoverMenu = () => {
                         <li key={innerCat.title}>
                           <Link
                             href={`/${rootCat.slug}/${innerCat.slug}`}
-                            className="font-normal block py-[1px] hover:scale-105 transition-transform duration-100 ease-in-out"
+                            className="block py-[1px] font-normal transition-transform duration-100 ease-in-out hover:scale-105"
                           >
                             {innerCat.title}
                           </Link>

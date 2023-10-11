@@ -13,10 +13,10 @@ const HorizontalCategoryList = ({ category }) => {
       duration={0.3}
       staggerChildren={0.08}
       delayChildren={0.3}
-      className={"flex xl:hidden gap-2 items-center w-full overflow-x-scroll scrollbar-none"}
+      className={"flex w-full items-center gap-2 overflow-x-scroll scrollbar-none xl:hidden"}
     >
       {subCategories.map((cat) => (
-        <div key={cat.title} className="inline-block border px-2 py-1 text-sm rounded min-w-fit my-3">
+        <div key={cat.title} className="my-3 inline-block min-w-fit rounded border px-2 py-1 text-sm">
           <Link href={`/${findRootParent(cat).slug}/${cat.slug}`}>{cat.title}</Link>
         </div>
       ))}
@@ -29,12 +29,12 @@ const HorizontalCategoryList = ({ category }) => {
       duration={0.8}
       staggerChildren={0.08}
       delayChildren={0.3}
-      className={"flex xl:hidden gap-2 items-center w-full overflow-x-scroll scrollbar-none"}
+      className={"flex w-full items-center gap-2 overflow-x-scroll scrollbar-none xl:hidden"}
     >
       {findSiblingCategories(category).map((cat) => (
         <div
-          className={`inline-block border px-2 py-1 text-sm rounded min-w-fit my-3 ${
-            cat.slug === category.slug ? "border-sky-300 border-2 font-semibold" : ""
+          className={`my-3 inline-block min-w-fit rounded border px-2 py-1 text-sm ${
+            cat.slug === category.slug ? "border-2 border-sky-300 font-semibold" : ""
           }`}
           key={cat.title}
         >
