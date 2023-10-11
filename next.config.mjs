@@ -2,9 +2,9 @@
 import withPlaiceholder from "@plaiceholder/next";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: "export",
+  output: "export",
   images: {
-    // unoptimized: true,
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -12,7 +12,7 @@ const nextConfig = {
       },
     ],
   },
-  // basePath: "/Oshofree-Web",
+  basePath: "/Oshofree-Web",
 };
 
 // module.exports = nextConfig;
