@@ -67,7 +67,7 @@ const SnapView = ({ children }) => {
     };
   }, [windowHeight, orientation]);
 
-  const allowFullScreenMode = orientation === "portrait" || (orientation === "landscape" && windowHeight >= 658);
+  const allowFullScreenMode = orientation === "portrait" || (orientation === "landscape" && windowHeight >= 600);
 
   return (
     <main
