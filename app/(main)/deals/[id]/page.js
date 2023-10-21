@@ -1,5 +1,4 @@
 import React from "react";
-import SnapSection from "@/components/global/SnapSection";
 import { dealOfTheDay } from "@/data/dealOfTheDay";
 import { MdOutlineChevronRight, MdOutlineLocationOn, MdOutlineInfo, MdFavoriteBorder, MdSearch } from "react-icons/md";
 import { FaFacebookF, FaInstagram, FaTiktok, FaTwitter, FaWhatsapp } from "react-icons/fa";
@@ -12,6 +11,7 @@ import DealCard from "@/components/DealCard";
 import SearchbarHeader from "@/components/ui/searchbarHeader";
 import DealActions from "@/components/dealPage/DealActions";
 import StaggerContainer from "@/components/animations/StaggerContainer";
+import Section from "@/components/global/Section";
 
 export function generateStaticParams() {
   return dealOfTheDay.map((deal) => ({ id: `${deal.id}` }));
@@ -22,7 +22,7 @@ const DealItem = ({ params }) => {
   const deal = dealOfTheDay.find((deal) => deal.id == productId);
   return (
     <>
-      <SnapSection nextSectionTitle={"About this deal"} className="pt-20">
+      <Section>
         <div className="mx-auto max-w-[1328px] px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
           <SearchbarHeader />
           <StaggerContainer
@@ -160,11 +160,11 @@ const DealItem = ({ params }) => {
             </div>
           </StaggerContainer>
         </div>
-      </SnapSection>
-      <SnapSection nextSectionTitle={"Reviews"} className="pt-20">
+      </Section>
+      <Section>
         <StaggerContainer selector=".stagger" viewportAmount={0.1} yOffset={50} duration={0.5} staggerChildren={0.12} delayChildren={0.1}>
-          <h1 className="stagger mb-11 mt-6 text-center text-2xl font-extrabold capitalize sm:text-3xl">About this deal</h1>
-          <section className="mx-auto max-w-[1328px] space-y-10 px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
+          <h1 className="stagger mb-11 text-center text-2xl font-extrabold capitalize sm:text-3xl">About this deal</h1>
+          <section className="mx-auto max-w-[1328px] space-y-10 px-6 pb-20 lg:px-28 xl:px-32 2xl:px-14">
             <div className="stagger mx-auto max-w-3xl">
               <h2 className="mb-3 text-2xl font-bold">Description</h2>
               <div>
@@ -198,11 +198,11 @@ const DealItem = ({ params }) => {
             </div>
           </section>
         </StaggerContainer>
-      </SnapSection>
-      <SnapSection nextSectionTitle={"Similar deals"} className="pt-20">
+      </Section>
+      <Section>
         <StaggerContainer selector=".stagger" viewportAmount={0.1} yOffset={50} duration={0.5} staggerChildren={0.12} delayChildren={0.1}>
-          <h1 className="stagger mb-11 mt-6 text-center text-2xl font-extrabold capitalize sm:text-3xl">Customer Reviews</h1>
-          <section className="mx-auto max-w-[1328px] px-6 py-3 lg:px-28 xl:px-32 2xl:px-14 ">
+          <h1 className="stagger mb-11 text-center text-2xl font-extrabold capitalize sm:text-3xl">Customer Reviews</h1>
+          <section className="mx-auto max-w-[1328px] px-6 pb-20 lg:px-28 xl:px-32 2xl:px-14 ">
             <div className="stagger mx-auto mb-10 flex max-w-3xl items-center gap-4">
               <h2 className="text-5xl font-bold">{deal.rating}</h2>
               <RatingStars rating={deal.rating} className={"text-2xl"} />
@@ -295,12 +295,12 @@ const DealItem = ({ params }) => {
             </div>
           </section>
         </StaggerContainer>
-      </SnapSection>
-      <SnapSection nextSectionTitle={"Footer"} className="pt-20">
-        <div className="mb-11 mt-6 text-center capitalize">
+      </Section>
+      <Section>
+        <div className="mb-11 text-center capitalize">
           <h1 className="text-2xl font-extrabold sm:text-3xl">Similar Deals</h1>
         </div>
-        <section className="mx-auto max-w-[1328px] px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
+        <section className="mx-auto max-w-[1328px] px-6 pb-20 lg:px-28 xl:px-32 2xl:px-14">
           <div className="grid gap-x-6 gap-y-9 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
             {dealOfTheDay
               .map((item) => (
@@ -321,7 +321,7 @@ const DealItem = ({ params }) => {
             See More
           </Link>
         </section>
-      </SnapSection>
+      </Section>
     </>
   );
 };

@@ -1,18 +1,18 @@
 import React from "react";
 import ImageWithPlaceholder from "@/components/ImageWithPlaceholder";
 import Float from "@/components/animations/Float";
-import SnapSection from "@/components/global/SnapSection";
 import VendorForm from "@/components/VendorForm";
 import vendor from "@/public/images/vendor.webp";
 import vendor2 from "@/public/images/vendor2.jpg";
 import vendor3 from "@/public/images/vendor3.webp";
 import StaggerContainer from "@/components/animations/StaggerContainer";
+import Section from "@/components/global/Section";
 
 const page = () => {
   return (
     <>
-      <SnapSection nextSectionTitle={"Why Use Oshofree"} className="pt-20">
-        <div className="mx-auto flex max-w-screen-2xl flex-col px-6 lg:px-36  xl:flex-row xl:px-40">
+      <Section>
+        <div className="mx-auto flex max-w-screen-2xl flex-col px-6 lg:px-36 xl:flex-row xl:px-40">
           <div className="relative h-64 overflow-hidden sm:h-80 lg:h-96 xl:h-auto xl:basis-1/2">
             <Float
               delay={0}
@@ -72,11 +72,11 @@ const page = () => {
             <VendorForm className={"stagger"} />
           </StaggerContainer>
         </div>
-      </SnapSection>
-      <SnapSection nextSectionTitle={""} className="pt-20">
+      </Section>
+      <Section>
         <StaggerContainer selector=".stagger" viewportAmount={0.1} yOffset={50} duration={0.5} staggerChildren={0.12} delayChildren={0.2}>
           <h1 className="stagger mb-11 mt-6 text-center text-2xl font-extrabold capitalize sm:text-3xl">Why Use Oshofree</h1>
-          <section className="mx-auto max-w-[1328px] space-y-10 px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
+          <section className="mx-auto max-w-[1328px] space-y-10 px-6 pb-20 lg:px-28 xl:px-32 2xl:px-14">
             <div className="stagger mx-auto max-w-3xl">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias reprehenderit totam, quasi quae libero assumenda eligendi laborum
               iure sunt voluptates itaque ducimus quos esse maiores dolores aut fugiat iste? Nisi, reprehenderit! Deserunt consequuntur nulla minus
@@ -95,7 +95,7 @@ const page = () => {
             </div>
           </section>
         </StaggerContainer>
-      </SnapSection>
+      </Section>
     </>
   );
 };

@@ -1,16 +1,16 @@
 import React from "react";
-import SnapSection from "@/components/global/SnapSection";
 import SearchbarHeader from "@/components/ui/searchbarHeader";
 import Link from "next/link";
 import { MdOutlineChevronRight } from "react-icons/md";
 import DealCard from "@/components/DealCard";
 import { dealOfTheDay } from "@/data/dealOfTheDay";
 import StaggerContainer from "@/components/animations/StaggerContainer";
+import Section from "@/components/global/Section";
 
 const Wishlist = () => {
   return (
     <>
-      <SnapSection nextSectionTitle={"Footer"} className="pt-20">
+      <Section>
         <div className="mx-auto max-w-[1328px] px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
           <SearchbarHeader />
           <StaggerContainer
@@ -34,7 +34,7 @@ const Wishlist = () => {
             </nav>
             <h1 className="stagger mb-6 text-2xl font-bold capitalize leading-[3rem] [word-spacing:3px] sm:text-4xl">Your Saved Items</h1>
           </StaggerContainer>
-          <section className="mx-auto max-w-[1328px] overflow-hidden px-6 py-3">
+          <section className="mx-auto mb-20 max-w-[1328px] overflow-hidden px-6 py-3">
             <div className="grid gap-x-6 gap-y-9 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
               {dealOfTheDay
                 .map((item) => (
@@ -63,7 +63,7 @@ const Wishlist = () => {
             </div>
           </section>
         </div>
-      </SnapSection>
+      </Section>
     </>
   );
 };

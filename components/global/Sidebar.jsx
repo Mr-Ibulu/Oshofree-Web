@@ -30,7 +30,7 @@ const Sidebar = () => {
         <ul>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/"} className="flex h-12 items-center">
+              <Link href={"/"} className="flex h-12 items-center">
                 <div className="w-10">
                   <MdOutlineHome className="text-2xl" />
                 </div>
@@ -40,7 +40,7 @@ const Sidebar = () => {
           </li>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/login"} className="flex h-12 items-center">
+              <Link href={"/login"} className="flex h-12 items-center">
                 <div className="w-10">
                   <MdPersonOutline className="text-2xl" />
                 </div>
@@ -50,7 +50,7 @@ const Sidebar = () => {
           </li>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/cart"} className="flex h-12 items-center">
+              <Link href={"/cart"} className="flex h-12 items-center">
                 <div className="w-10">
                   <MdOutlineShoppingCart className="text-2xl" />
                 </div>
@@ -60,7 +60,7 @@ const Sidebar = () => {
           </li>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/account/account-info"} className="flex h-12 items-center">
+              <Link href={"/account/account-info"} className="flex h-12 items-center">
                 <div className="w-10">
                   <MdOutlineManageAccounts className="text-2xl" />
                 </div>
@@ -70,7 +70,7 @@ const Sidebar = () => {
           </li>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/account/open-orders"} className="flex h-12 items-center">
+              <Link href={"/account/open-orders"} className="flex h-12 items-center">
                 <div className="w-10">
                   <MdOutlineShoppingBag className="text-2xl" />
                 </div>
@@ -80,7 +80,7 @@ const Sidebar = () => {
           </li>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/account/wallet"} className="flex h-12 items-center">
+              <Link href={"/account/wallet"} className="flex h-12 items-center">
                 <div className="w-10">
                   <MdOutlineAccountBalanceWallet className="text-2xl" />
                 </div>
@@ -93,7 +93,7 @@ const Sidebar = () => {
           </li>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/wishlist"} className="flex h-12 items-center">
+              <Link href={"/wishlist"} className="flex h-12 items-center">
                 <div className="w-10">
                   <MdFavoriteBorder className="text-2xl" />
                 </div>
@@ -103,7 +103,7 @@ const Sidebar = () => {
           </li>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/logout"} className="flex h-12 items-center">
+              <Link href={"/logout"} className="flex h-12 items-center">
                 <div className="w-10">
                   <MdOutlineLogout className="text-2xl" />
                 </div>
@@ -131,7 +131,7 @@ const Sidebar = () => {
             .map((subCat) => (
               <li key={subCat.title}>
                 <SheetClose asChild>
-                  <Link scroll={false} href={`/${subCat.parent}/${subCat.slug}`} className="flex h-12 items-center">
+                  <Link href={`/${subCat.parent}/${subCat.slug}`} className="flex h-12 items-center">
                     <div className="grow">{subCat.title}</div>
                   </Link>
                 </SheetClose>
@@ -140,7 +140,7 @@ const Sidebar = () => {
             .slice(3, 13)}
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/categories"} className="flex h-12 items-center">
+              <Link href={"/categories"} className="flex h-12 items-center">
                 <div className="grow font-medium">Browse All Categories</div>
               </Link>
             </SheetClose>
@@ -161,21 +161,21 @@ const Sidebar = () => {
         <ul>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/sell"} className="flex h-12 items-center">
+              <Link href={"/sell"} className="flex h-12 items-center">
                 <div className="grow">Sell On Oshofree</div>
               </Link>
             </SheetClose>
           </li>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/"} className="flex h-12 items-center">
+              <Link href={"/"} className="flex h-12 items-center">
                 <div className="grow">Contact Us</div>
               </Link>
             </SheetClose>
           </li>
           <li>
             <SheetClose asChild>
-              <Link scroll={false} href={"/"} className="flex h-12 items-center">
+              <Link href={"/"} className="flex h-12 items-center">
                 <div className="grow">Blog</div>
               </Link>
             </SheetClose>

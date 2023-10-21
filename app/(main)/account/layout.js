@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import SnapSection from "@/components/global/SnapSection";
 import {
   MdOutlineAccountBalanceWallet,
   MdOutlineAccountCircle,
@@ -11,6 +10,7 @@ import {
 import NavigationLink from "@/components/UserAccountPage/NavigationLink";
 import TopNavigationHead from "@/components/UserAccountPage/TopNavigationHead";
 import StaggerContainer from "@/components/animations/StaggerContainer";
+import Section from "@/components/global/Section";
 
 const navigationLinkGroups = [
   {
@@ -45,8 +45,8 @@ const navigationLinkGroups = [
 
 const AccountInfoLayout = ({ children }) => {
   return (
-    <SnapSection nextSectionTitle={"Footer"} className="pt-20">
-      <div className="mx-auto max-w-[1328px] px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
+    <Section>
+      <div className="mx-auto max-w-[1328px] px-6 pb-20 lg:px-28 xl:px-32 2xl:px-14">
         <StaggerContainer selector=".stagger" viewportAmount={0.1} repeat={true} yOffset={20} duration={0.5} staggerChildren={0.12} delayChildren={0}>
           <nav className="stagger mb-7 flex text-sm">
             {["Home", "Account"].map((breadcrumb, index, arr) => (
@@ -62,7 +62,7 @@ const AccountInfoLayout = ({ children }) => {
           <div className="flex min-h-[650px] flex-col gap-5 md:flex-row">
             <TopNavigationHead navGroups={navigationLinkGroups} className={"stagger md:hidden"} />
             <div className="stagger hidden basis-[35%] rounded-lg bg-white px-3 py-5 shadow-lg md:block xl:basis-[25%]">
-              <div className="sticky top-0 space-y-10">
+              <div className="sticky top-20 space-y-10">
                 {navigationLinkGroups.map((navGroup) => (
                   <div key={navGroup.title}>
                     <div className="flex items-center gap-2 text-lg font-semibold">
@@ -82,7 +82,7 @@ const AccountInfoLayout = ({ children }) => {
           </div>
         </StaggerContainer>
       </div>
-    </SnapSection>
+    </Section>
   );
 };
 

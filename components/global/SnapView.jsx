@@ -75,9 +75,6 @@ const SnapView = ({ children }) => {
       className={`${allowFullScreenMode ? "snap-y snap-mandatory overflow-x-hidden" : ""} relative text-gray-800 scrollbar-none`}
       style={{ height: allowFullScreenMode ? windowHeight : "fit-content" }}
     >
-      <motion.div style={{ y: y }} className=" fixed h-[150%] w-full">
-        <Image src={bgImage} alt="background" fill className="object-cover" priority={true} />
-      </motion.div>
       {children}
     </main>
   );

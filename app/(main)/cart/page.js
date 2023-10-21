@@ -1,5 +1,4 @@
 import React from "react";
-import SnapSection from "@/components/global/SnapSection";
 import Link from "next/link";
 import { MdDelete, MdOutlineChevronRight, MdFavoriteBorder } from "react-icons/md";
 import { dealOfTheDay } from "@/data/dealOfTheDay";
@@ -9,12 +8,13 @@ import { Separator } from "@/components/ui/separator";
 import DealCard from "@/components/DealCard";
 import { cart } from "@/data/cart";
 import StaggerContainer from "@/components/animations/StaggerContainer";
+import Section from "@/components/global/Section";
 
 const Cart = () => {
   const cartSubtotal = cart.reduce((acc, val) => acc + val.deal.newPrice * val.quantity, 0);
   return (
     <>
-      <SnapSection nextSectionTitle={"You might also like"} className="pt-20">
+      <Section>
         <div className="mx-auto max-w-[1328px] px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
           <StaggerContainer
             selector=".stagger"
@@ -102,7 +102,7 @@ const Cart = () => {
                 ))}
               </div>
               <div className="stagger basis-[40%] xl:basis-[30%] ">
-                <div className="sticky top-0 max-h-screen rounded-md bg-white p-4 shadow">
+                <div className="sticky top-20 max-h-screen rounded-md bg-white p-4 shadow">
                   <div className="flex flex-col gap-3">
                     <div className="flex items-center justify-between font-bold">
                       <span className="text-lg">Order Summary</span> <span>{cart.length} Items</span>
@@ -132,9 +132,9 @@ const Cart = () => {
             </div>
           </StaggerContainer>
         </div>
-      </SnapSection>
-      <SnapSection nextSectionTitle={"Footer"} className="pt-20">
-        <div className="mb-11 mt-6 text-center capitalize">
+      </Section>
+      <Section>
+        <div className="mb-11 text-center capitalize">
           <h1 className="text-2xl font-extrabold sm:text-3xl">You Might Also Like</h1>
         </div>
         <section className="mx-auto max-w-[1328px] overflow-hidden px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
@@ -154,11 +154,14 @@ const Cart = () => {
               ))
               .slice(0, 5)}
           </div>
-          <Link href={"/"} className="mx-auto mt-12 block rounded-full border-2 border-red-400 py-2 text-center font-bold sm:w-[50%] xl:w-[30%]">
+          <Link
+            href={"/"}
+            className="mx-auto mb-20 mt-12 block rounded-full border-2 border-red-400 py-2 text-center font-bold sm:w-[50%] xl:w-[30%]"
+          >
             See More
           </Link>
         </section>
-      </SnapSection>
+      </Section>
     </>
   );
 };

@@ -13,7 +13,7 @@ const FilterCard = ({ category }) => {
   const parentCategory = findParent(category);
   const subCategories = findSubCategories(category);
   return (
-    <div className="sticky top-0 max-h-screen overflow-y-scroll rounded-lg bg-white px-2 pb-20 shadow-lg scrollbar-none scrollbar-track-gray-100 scrollbar-thumb-gray-300 hover:scrollbar-thin">
+    <div className="sticky top-20 max-h-screen overflow-y-scroll rounded-lg bg-white px-2 pb-20 shadow-lg scrollbar-none scrollbar-track-gray-100 scrollbar-thumb-gray-300 hover:scrollbar-thin">
       <Accordion type="single" defaultValue="subcategories" collapsible>
         <AccordionItem value="subcategories">
           <AccordionTrigger className="text-sm font-bold">Category</AccordionTrigger>

@@ -111,7 +111,6 @@ const Navbar = () => {
               <Link
                 href={"/login"}
                 aria-label="Login"
-                scroll={false}
                 className="inline-flex items-center gap-2 transition-transform duration-100 ease-in-out hover:scale-105"
               >
                 <MdPersonOutline className="text-2xl sm:text-3xl" />

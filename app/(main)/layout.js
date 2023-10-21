@@ -3,7 +3,7 @@ import "../globals.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Footer from "@/components/global/Footer";
 import Navbar from "@/components/global/Navbar";
-import SnapView from "@/components/global/SnapView";
+import ParallexBackgroundImage from "@/components/global/ParallexBackgroundImage";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -18,13 +18,14 @@ export const metadata = {
 const MainLayout = ({ children, auth }) => {
   return (
     <html lang="en" className={plusJakartaSans.className}>
-      <body className="subpixel-antialiased scrollbar-none before:block before:h-[1px] before:bg-red-500">
-        <SnapView>
-          <Navbar />
+      <body className="overflow-y-auto scroll-smooth subpixel-antialiased scrollbar-track-red-200 scrollbar-thumb-red-500 scrollbar-track-rounded-full scrollbar-thumb-rounded-full before:block before:h-[1px] before:bg-red-500 xl:scrollbar-thin">
+        <ParallexBackgroundImage />
+        <Navbar />
+        <main>
           {children}
           {auth}
-          <Footer />
-        </SnapView>
+        </main>
+        <Footer />
       </body>
     </html>
   );

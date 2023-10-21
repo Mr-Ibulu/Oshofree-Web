@@ -9,7 +9,7 @@ import RegisterationForm from "@/components/auth/RegisterationForm";
 
 const Register = () => {
   return (
-    <div className="flex h-[100dvh] w-full justify-center overflow-y-auto bg-gray-100 py-5 scrollbar-track-red-200 scrollbar-thumb-red-500 scrollbar-track-rounded-full scrollbar-thumb-rounded-full xl:scrollbar-thin">
+    <div className="flex min-h-screen w-full justify-center bg-gray-100 py-5">
       <div className="my-auto grid h-fit w-[95%] overflow-hidden rounded-lg bg-white sm:max-w-xl xl:max-w-6xl xl:grid-cols-2">
         <div className="p-6 sm:px-10">
           <Link href={"/"} className="mb-10 inline-flex items-center justify-between">

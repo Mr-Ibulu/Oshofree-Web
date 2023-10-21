@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "@/public/images/brand-white.png";
-import SnapSection from "@/components/global/SnapSection";
 import ImageWithPlaceholder from "@/components/ImageWithPlaceholder";
 import footerImg from "@/public/images/footerImg.jpg";
 import mastercardLogo from "@/public/images/mastercard-logo.png";
@@ -9,13 +8,14 @@ import vervecardLogo from "@/public/images/verve-logo.png";
 import { MdPhone, MdEmail } from "react-icons/md";
 import Link from "next/link";
 import Image from "next/image";
+import Section from "./Section";
 
 const Footer = () => {
   return (
-    <SnapSection className={"z-20"}>
+    <Section>
       <footer className="relative pb-20 pt-20 [word-spacing:3px] sm:min-h-full">
         <ImageWithPlaceholder src={footerImg} alt={"footer-image"} fill={true} sizes={"(max-width: 768px) 80vw, 100vw"} priority={true} />
-        <div className="relative mx-auto h-full w-full max-w-screen-2xl overflow-y-auto overflow-x-hidden scrollbar-track-red-200 scrollbar-thumb-red-500 scrollbar-track-rounded-full scrollbar-thumb-rounded-full xl:scrollbar-thin">
+        <div className="relative mx-auto h-full w-full max-w-screen-2xl overflow-y-auto overflow-x-hidden">
           <div className="mx-6 flex flex-col justify-center gap-5 rounded-lg bg-white p-6 sm:gap-6 lg:items-center xl:flex-row">
             <div className="flex flex-col gap-4 gap-x-8 sm:flex-row">
               <div className="flex items-center gap-4">
@@ -156,7 +156,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </SnapSection>
+    </Section>
   );
 };
 

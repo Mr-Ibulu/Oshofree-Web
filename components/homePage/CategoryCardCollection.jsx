@@ -12,7 +12,6 @@ const CategoryCardCollection = ({ rootCategory }) => {
         <Link
           href={rootCategory.slug}
           className="col-span-3 mt-10 flex items-center justify-between text-xl font-bold sm:col-span-4 md:col-span-5 2xl:col-span-6"
-          scroll={false}
         >
           <p>{rootCategory.title}</p>
           <div className="flex items-center gap-2 text-sm text-red-600">
@@ -23,7 +22,7 @@ const CategoryCardCollection = ({ rootCategory }) => {
 
       {findSubCategories(rootCategory).map((item) => (
         // <FadeInFromZoom reapeat={true} initialScale={1.5} duration={0.2} key={item.title}>
-        <Link href={rootCategory.slug === "highlight" ? "" : `${rootCategory.slug}/${item.slug}`} key={item.title} scroll={false}>
+        <Link href={rootCategory.slug === "highlight" ? "" : `${rootCategory.slug}/${item.slug}`} key={item.title}>
           <div className="relative flex h-24 overflow-hidden rounded-lg shadow-md transition-transform delay-75 duration-200 ease-in-out hover:-translate-y-2 sm:h-32 xl:h-36">
             <ImageWithPlaceholder src={item.image} alt={item.title} fill={true} sizes={"20vw"} className={"object-cover"} />
           </div>

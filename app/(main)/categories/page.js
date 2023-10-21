@@ -1,16 +1,16 @@
 import React from "react";
-import SnapSection from "@/components/global/SnapSection";
 import Link from "next/link";
 import { MdOutlineChevronRight } from "react-icons/md";
 import CategoryList from "@/components/CategoryList";
 import { findAllRootCategories } from "@/lib/utils";
 import StaggerContainer from "@/components/animations/StaggerContainer";
+import Section from "@/components/global/Section";
 
 const AllCategories = () => {
   return (
     <>
-      <SnapSection nextSectionTitle={"Footer"} className="pt-20">
-        <div className="mx-auto max-w-[1328px] px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
+      <Section>
+        <div className="mx-auto max-w-[1328px] px-6 pb-20 lg:px-28 xl:px-32 2xl:px-14">
           <StaggerContainer
             selector=".stagger"
             viewportAmount={0.1}
@@ -40,7 +40,7 @@ const AllCategories = () => {
             </StaggerContainer>
           </section>
         </div>
-      </SnapSection>
+      </Section>
     </>
   );
 };

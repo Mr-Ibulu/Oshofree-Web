@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import SnapSection from "@/components/global/SnapSection";
 import SearchbarHeader from "@/components/ui/searchbarHeader";
 import { MdOutlineChevronRight } from "react-icons/md";
 import FilterCard from "@/components/categoryPage/FilterLeftCard";
@@ -8,11 +7,12 @@ import TitleHead from "@/components/categoryPage/TitleHead";
 import HorizontalCategoryList from "./HorizontalCategoryList";
 import DealCard from "@/components/DealCard";
 import StaggerContainer from "@/components/animations/StaggerContainer";
+import Section from "../global/Section";
 
 const CategoryPageTemplate = ({ category, results }) => {
   return (
     <>
-      <SnapSection nextSectionTitle={"Footer"} className="pt-20">
+      <Section>
         <div className="mx-auto max-w-screen-xl px-6 pb-1 pt-3 lg:px-28 xl:px-32 2xl:px-0 3xl:max-w-[1400px]">
           <SearchbarHeader />
           <StaggerContainer selector=".stagger" viewportAmount={0} repeat={true} yOffset={20} duration={0.5} staggerChildren={0.12} delayChildren={0}>
@@ -28,7 +28,7 @@ const CategoryPageTemplate = ({ category, results }) => {
             </nav>
             <TitleHead category={category} />
             <HorizontalCategoryList category={category} />
-            <div className="flex gap-5">
+            <div className="mb-20 flex gap-5">
               <div className="stagger hidden basis-[20%] xl:block">
                 <FilterCard category={category} />
               </div>
@@ -61,7 +61,7 @@ const CategoryPageTemplate = ({ category, results }) => {
             </div>
           </StaggerContainer>
         </div>
-      </SnapSection>
+      </Section>
     </>
   );
 };
