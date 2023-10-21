@@ -12,7 +12,7 @@ const FadeInFromSides = ({
   yOffset = 0,
   duration = 1,
   delay,
-  className,
+  className = "",
 }) => {
   return (
     <motion.div

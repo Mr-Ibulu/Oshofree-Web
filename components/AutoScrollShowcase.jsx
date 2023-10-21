@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import { MdNavigateBefore, MdNavigateNext, MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 
-const AutoScrollShowcase = ({ scroll = true, horizontal = true, className, children }) => {
+const AutoScrollShowcase = ({ scroll = true, horizontal = true, className = "", children }) => {
   const container = useRef(null);
   const width = useRef(0);
   const height = useRef(0);

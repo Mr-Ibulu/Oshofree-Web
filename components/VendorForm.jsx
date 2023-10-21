@@ -4,7 +4,7 @@ import * as Form from "@radix-ui/react-form";
 import { BiSolidErrorCircle } from "react-icons/bi";
 import Link from "next/link";
 
-const VendorForm = ({ showMoreInfoButton = false, className }) => {
+const VendorForm = ({ showMoreInfoButton = false, className = "" }) => {
   return (
     <div className={`${className} rounded-2xl border bg-white p-8 shadow-lg shadow-gray-300`}>
       <Form.Root>

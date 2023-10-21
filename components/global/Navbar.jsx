@@ -1,5 +1,4 @@
 import React from "react";
-import { FaFacebookF, FaInstagram, FaTiktok, FaTwitter } from "react-icons/fa";
 import { MdPersonOutline, MdOutlineShoppingCart, MdFavoriteBorder, MdMenu } from "react-icons/md";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import logo from "@/public/images/brand-black.png";

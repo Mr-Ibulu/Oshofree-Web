@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import { useAnimate, useInView } from "framer-motion";
 
-const DropInFromZoom = ({ viewportAmount = 0.05, repeat = false, initialScale = 1.13, duration = 0.4, delay, className, children }) => {
+const DropInFromZoom = ({ viewportAmount = 0.05, repeat = false, initialScale = 1.13, duration = 0.4, delay, className = "", children }) => {
   const [scope, animate] = useAnimate();
   const containerInView = useInView(scope, { amount: viewportAmount, once: !repeat });
   useEffect(() => {

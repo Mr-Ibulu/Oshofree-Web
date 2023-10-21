@@ -13,7 +13,7 @@ const StaggerContainer = ({
   staggerChildren = 0.05,
   delayChildren = 0.07,
   dependencies = [],
-  className,
+  className = "",
   children,
 }) => {
   const [scope, animate] = useAnimate();

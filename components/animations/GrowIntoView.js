@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const GrowIntoView = ({ children, viewportAmount = 0.2, reapeat = false, initialScale = 0.2, duration = 1, delay = 0.1, className }) => {
+const GrowIntoView = ({ children, viewportAmount = 0.2, reapeat = false, initialScale = 0.2, duration = 1, delay = 0.1, className = "" }) => {
   return (
     <motion.div
       initial="offscreen"

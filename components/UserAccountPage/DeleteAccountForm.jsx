@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import * as Form from "@radix-ui/react-form";
 
-const DeleteAccountForm = ({ className }) => {
+const DeleteAccountForm = ({ className = "" }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheck = () => {

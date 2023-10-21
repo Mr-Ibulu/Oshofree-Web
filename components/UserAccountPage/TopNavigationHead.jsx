@@ -7,7 +7,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { MdOutlineChevronLeft, MdOutlineClose, MdOutlineSettings } from "react-icons/md";
 import StaggerContainer from "../animations/StaggerContainer";
 
-const TopNavigationHead = ({ navGroups, className }) => {
+const TopNavigationHead = ({ navGroups, className = "" }) => {
   const pathname = usePathname();
   const router = useRouter();
   const activeGroup = navGroups.find((navGroup) => navGroup.links.find((link) => link.href === pathname));
