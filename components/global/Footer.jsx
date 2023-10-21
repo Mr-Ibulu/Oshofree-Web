@@ -9,6 +9,7 @@ import { MdPhone, MdEmail } from "react-icons/md";
 import Link from "next/link";
 import Image from "next/image";
 import Section from "./Section";
+import { FaFacebookF, FaInstagram, FaTiktok, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -142,15 +143,49 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="relative mt-10 space-x-4">
-              <div className="relative inline-block aspect-[16/9] w-14 overflow-hidden rounded-md">
-                <ImageWithPlaceholder src={mastercardLogo} alt={"mastercard-logo"} sizes={"10vw"} fill={true} className="object-cover" />
+            <div className="relative mt-10 items-center space-y-4 sm:flex sm:space-y-0">
+              <div className="space-x-4 text-xl">
+                <Link
+                  href="/"
+                  className="my-3 inline-block rounded-full p-2 transition-transform duration-150 ease-in-out hover:scale-150 hover:text-[#1877F2]"
+                >
+                  <FaFacebookF />
+                </Link>
+                <Link
+                  href="https://twitter.com/oshofreeapp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="my-3 inline-block rounded-full p-2 transition-transform duration-150 ease-in-out hover:scale-150 hover:text-[#1DA1F2]"
+                >
+                  <FaTwitter />
+                </Link>
+                <Link
+                  href="https://instagram.com/oshofreeapp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="my-3 inline-block rounded-full p-2 transition-transform duration-150 ease-in-out hover:scale-150 hover:text-[#D62976]"
+                >
+                  <FaInstagram />
+                </Link>
+                <Link
+                  href="https://www.tiktok.com/@oshofreeapp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="my-3 inline-block rounded-full p-2 transition-transform duration-150 ease-in-out hover:scale-150 hover:text-[#ff0050]"
+                >
+                  <FaTiktok />
+                </Link>
               </div>
-              <div className="relative inline-block aspect-[16/9] w-14 overflow-hidden rounded-md">
-                <ImageWithPlaceholder src={visacardLogo} alt={"visacard-logo"} sizes={"10vw"} fill={true} className="object-cover" />
-              </div>
-              <div className="relative inline-block aspect-[16/9] w-14 overflow-hidden rounded-md">
-                <ImageWithPlaceholder src={vervecardLogo} alt={"vervecard-logo"} sizes={"50vw"} fill={true} className="object-cover" />
+              <div className="ml-auto space-x-4">
+                <div className="relative inline-block aspect-[16/9] w-10 overflow-hidden rounded-md">
+                  <ImageWithPlaceholder src={mastercardLogo} alt={"mastercard-logo"} sizes={"10vw"} fill={true} className="object-cover" />
+                </div>
+                <div className="relative inline-block aspect-[16/9] w-10 overflow-hidden rounded-md">
+                  <ImageWithPlaceholder src={visacardLogo} alt={"visacard-logo"} sizes={"10vw"} fill={true} className="object-cover" />
+                </div>
+                <div className="relative inline-block aspect-[16/9] w-10 overflow-hidden rounded-md">
+                  <ImageWithPlaceholder src={vervecardLogo} alt={"vervecard-logo"} sizes={"50vw"} fill={true} className="object-cover" />
+                </div>
               </div>
             </div>
           </div>

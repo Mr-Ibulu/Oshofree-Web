@@ -15,53 +15,19 @@ const Navbar = () => {
   return (
     <header className="fixed left-0 right-0 top-0 z-10 w-full bg-transparent backdrop-blur">
       <div className="mx-auto flex max-w-[1328px] items-center justify-between px-4 py-4 sm:px-7 lg:px-14 2xl:px-0">
-        <div className="absolute left-0 h-full w-14 -translate-y-4 self-start sm:w-24 lg:h-[100dvh] ">
-          <div className="relative flex h-full flex-col items-center">
-            <Sheet>
-              <SheetTrigger asChild>
-                <button className="mt-6 text-3xl focus:outline-none sm:text-4xl">
-                  <span className="sr-only">Menu</span>
-                  <MdMenu />
-                  <div className="hidden text-xs sm:block">Menu</div>
-                </button>
-              </SheetTrigger>
-              <SheetContent side={"left"} className="w-[80%] rounded-r-2xl p-0">
-                <Sidebar />
-              </SheetContent>
-            </Sheet>
-            <section className="absolute top-1/2 hidden -translate-y-1/2 text-lg text-gray-600 lg:block">
-              <Link
-                href="/"
-                className="my-3 block rounded-full p-2 transition-transform duration-150 ease-in-out hover:scale-150 hover:text-[#1877F2]"
-              >
-                <FaFacebookF />
-              </Link>
-              <Link
-                href="https://twitter.com/oshofreeapp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="my-3 block rounded-full p-2 transition-transform duration-150 ease-in-out hover:scale-150 hover:text-[#1DA1F2]"
-              >
-                <FaTwitter />
-              </Link>
-              <Link
-                href="https://instagram.com/oshofreeapp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="my-3 block rounded-full p-2 transition-transform duration-150 ease-in-out hover:scale-150 hover:text-[#D62976]"
-              >
-                <FaInstagram />
-              </Link>
-              <Link
-                href="https://www.tiktok.com/@oshofreeapp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="my-3 block rounded-full p-2 transition-transform duration-150 ease-in-out hover:scale-150 hover:text-[#ff0050]"
-              >
-                <FaTiktok />
-              </Link>
-            </section>
-          </div>
+        <div className="absolute left-0 flex h-full w-14 -translate-y-4 items-center justify-center self-start sm:w-24">
+          <Sheet>
+            <SheetTrigger asChild>
+              <button className="text-3xl focus:outline-none sm:text-4xl xl:mt-3">
+                <span className="sr-only">Menu</span>
+                <MdMenu />
+                <div className="hidden text-xs xl:block">Menu</div>
+              </button>
+            </SheetTrigger>
+            <SheetContent side={"left"} className="w-[80%] rounded-r-2xl p-0">
+              <Sidebar />
+            </SheetContent>
+          </Sheet>
         </div>
         <Link href="/" className="ml-10 sm:ml-16 xl:ml-12 2xl:ml-0">
           <Image src={logo} alt="logo" priority className="w-24 xs:w-28 sm:w-32" />
