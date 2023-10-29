@@ -7,7 +7,7 @@ const DealCard = ({ image, isNew, rating, description, prevPrice, newPrice, clas
   return (
     <DropInFromZoom repeat={true}>
       <div
-        className={`${className} group rounded-xl bg-white shadow shadow-gray-200 transition-transform delay-75 duration-200 ease-in-out hover:-translate-y-2`}
+        className={`${className} group rounded-xl bg-white shadow hover:shadow-md shadow-gray-200 transition-transform delay-75 duration-200 ease-in-out hover:-translate-y-2`}
       >
         <div className="relative flex h-52 items-center justify-center">
           <div className="relative h-[95%] w-[95%]">
