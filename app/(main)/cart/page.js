@@ -122,7 +122,7 @@ const Cart = () => {
                   <div className="mt-3">
                     <Link
                       href={""}
-                      className="block w-full rounded-md bg-red-500 py-3 text-center text-white transition-transform duration-200 ease-in-out hover:scale-105 focus:outline-none"
+                      className="block w-full rounded-md bg-red-600 py-3 text-center text-white transition-transform duration-200 ease-in-out hover:scale-105 focus:outline-none"
                     >
                       Proceed To Checkout
                     </Link>
