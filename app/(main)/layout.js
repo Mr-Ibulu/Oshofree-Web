@@ -18,7 +18,7 @@ export const metadata = {
 const MainLayout = ({ children, auth }) => {
   return (
     <html lang="en" className={plusJakartaSans.className}>
-      <body className="overflow-y-auto scroll-smooth subpixel-antialiased scrollbar-track-red-200 scrollbar-thumb-red-500 scrollbar-track-rounded-full scrollbar-thumb-rounded-full before:block before:h-[1px] before:bg-red-500 xl:scrollbar-thin">
+      <body className="overflow-y-auto scroll-smooth subpixel-antialiased scrollbar-track-red-200 scrollbar-thumb-red-500 scrollbar-track-rounded-full scrollbar-thumb-rounded-full xl:scrollbar-thin">
         <ParallexBackgroundImage />
         <Navbar />
         <main>
