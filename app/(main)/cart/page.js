@@ -102,7 +102,7 @@ const Cart = () => {
                 ))}
               </div>
               <div className="stagger basis-[40%] xl:basis-[30%] ">
-                <div className="sticky top-20 max-h-screen rounded-md bg-white p-4 shadow">
+                <div className="sticky top-20 max-h-screen rounded-xl bg-white p-4 shadow-md">
                   <div className="flex flex-col gap-3">
                     <div className="flex items-center justify-between font-bold">
                       <span className="text-lg">Order Summary</span> <span>{cart.length} Items</span>
