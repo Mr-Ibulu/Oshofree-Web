@@ -38,17 +38,24 @@ const Cart = () => {
             <h1 className="stagger mb-10 text-2xl font-bold capitalize leading-[3rem] [word-spacing:3px] sm:text-4xl">
               Your Cart ({cart.length} Items)
             </h1>
-            <div className="flex flex-col gap-10 md:flex-row">
+            <div className="flex flex-col gap-10 sm:flex-row">
               <div className="stagger basis-[60%] space-y-10 xl:basis-[70%]">
                 {cart.map((cartItem) => (
                   <div className="bg-white" key={cartItem.deal.id}>
-                    <div className="flex flex-col flex-wrap items-start gap-x-2 gap-y-4 xl:flex-row">
+                    <div className="flex flex-col flex-wrap items-start gap-x-2 gap-y-4 sm:flex-row">
                       <Link href={`/deals/${cartItem.deal.id}`}>
                         <div className="flex space-x-4">
-                          <div className="relative w-44 overflow-hidden rounded-md">
-                            <ImageWithPlaceholder src={cartItem.deal.image} />
+                          <div className="relative aspect-[3/2] w-20 shrink-0 overflow-hidden rounded-md sm:w-40">
+                            <ImageWithPlaceholder
+                              src={cartItem.deal.image}
+                              fill={true}
+                              alt={cartItem.deal.description}
+                              sizes={"(max-width:768px) 40vw, 60vw"}
+                            />
                           </div>
-                          <div className="max-w-xs py-2 text-sm font-semibold sm:text-base">{cartItem.deal.description}</div>
+                          <div className="max-w-xs py-2 text-sm font-semibold sm:text-base">
+                            <p className="line-clamp-3">{cartItem.deal.description}</p>
+                          </div>
                         </div>
                       </Link>
 
@@ -56,7 +63,7 @@ const Cart = () => {
                         <div className="flex items-center gap-1">
                           <div className="font-medium">Qty:</div>
                           <Select defaultValue={`${cartItem.quantity}`}>
-                            <SelectTrigger className="focus:ring-0" aria-label="Select Quantity">
+                            <SelectTrigger className="h-8 focus:ring-0" aria-label="Select Quantity">
                               <SelectValue />
                             </SelectTrigger>
                             <SelectContent>
@@ -83,7 +90,7 @@ const Cart = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="mt-4 flex items-center justify-center gap-8">
+                    <div className="mx-auto mt-4 flex max-w-sm items-center justify-between gap-8">
                       <button className="flex items-center gap-2 p-2 text-sm font-medium transition-transform duration-100 ease-in-out hover:scale-110">
                         Remove
                         <div className="text-xl text-red-500">
