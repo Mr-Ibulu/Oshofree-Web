@@ -58,8 +58,8 @@ const page = () => {
             selector=".stagger"
             viewportAmount={0.1}
             yOffset={100}
-            duration={1}
-            staggerChildren={0.3}
+            duration={1.5}
+            staggerChildren={0.15}
             delayChildren={0}
             className="mb-10 sm:mt-6 xl:basis-1/2"
           >

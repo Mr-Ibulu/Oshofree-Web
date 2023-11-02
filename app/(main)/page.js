@@ -171,8 +171,8 @@ export default function Home() {
             selector=".stagger"
             viewportAmount={0.1}
             yOffset={100}
-            duration={1}
-            staggerChildren={0.3}
+            duration={1.5}
+            staggerChildren={0.15}
             delayChildren={0}
             className="xl:basis-1/2"
           >
@@ -206,8 +206,8 @@ export default function Home() {
             selector=".stagger"
             viewportAmount={0.1}
             yOffset={100}
-            duration={1}
-            staggerChildren={0.3}
+            duration={1.5}
+            staggerChildren={0.15}
             delayChildren={0}
             className="my-auto flex flex-col justify-center lg:basis-1/2"
           >

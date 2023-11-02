@@ -33,7 +33,7 @@ const AllCategories = () => {
             <h1 className="stagger mb-6 text-3xl font-bold capitalize leading-[3rem] [word-spacing:3px] sm:text-4xl">Categories</h1>
           </StaggerContainer>
           <section className="max-w-[1328px] overflow-hidden py-3">
-            <StaggerContainer selector="nav" viewportAmount={0.1} repeat={true} yOffset={20} duration={0.5} staggerChildren={0.2} delayChildren={0.4}>
+            <StaggerContainer selector="nav" viewportAmount={0.1} repeat={true} yOffset={20} duration={1.5} staggerChildren={0.15} delayChildren={0.15}>
               {findAllRootCategories().map((rootCat) => (
                 <CategoryList rootCategory={rootCat} key={rootCat.id} />
               ))}
