@@ -95,7 +95,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="mx-auto max-w-[1328px] px-6 py-3 lg:px-8 xl:px-32 2xl:px-14">
+        <div className="mx-auto max-w-screen-xl px-6 py-3 lg:px-8 xl:px-32 2xl:px-0 3xl:max-w-[1400px]">
           <div className="grid gap-x-6 gap-y-9 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
             {dealOfTheDay
               .map((item) => (
@@ -121,7 +121,7 @@ export default function Home() {
         <div className="mb-11 text-center capitalize">
           <h1 className="text-2xl font-extrabold sm:text-3xl">Deals Based On Category</h1>
         </div>
-        <section className="mx-auto max-w-[1328px] px-6 py-3 lg:px-8 xl:px-32 2xl:px-14">
+        <section className="mx-auto max-w-screen-xl px-6 py-3 lg:px-8 xl:px-32 2xl:px-0 3xl:max-w-[1400px]">
           {findAllRootCategories().map((rootCat) => (
             <CategoryCardCollection key={rootCat.id} rootCategory={rootCat} />
           ))}

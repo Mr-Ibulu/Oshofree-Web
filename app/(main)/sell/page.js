@@ -61,7 +61,7 @@ const page = () => {
             duration={1.5}
             staggerChildren={0.15}
             delayChildren={0}
-            className="mb-10 sm:mt-6 xl:basis-1/2"
+            className="sm:mt-6 xl:basis-1/2"
           >
             <h1 className="stagger mb-6 text-center text-2xl font-extrabold [word-spacing:5px] sm:text-4xl">Sell a Product or Service on Oshofree</h1>
             <div className="stagger mx-auto mb-6 sm:w-[70%] xl:w-auto">
@@ -74,9 +74,9 @@ const page = () => {
         </div>
       </Section>
       <Section>
-        <StaggerContainer selector=".stagger" viewportAmount={0.1} yOffset={50} duration={0.5} staggerChildren={0.12} delayChildren={0.2}>
+        <StaggerContainer selector=".stagger" viewportAmount={0.1} yOffset={50} duration={1.5} staggerChildren={0.15} delayChildren={0}>
           <h1 className="stagger mb-11 mt-6 text-center text-2xl font-extrabold capitalize sm:text-3xl">Why Use Oshofree</h1>
-          <section className="mx-auto max-w-[1328px] space-y-10 px-6 pb-20 lg:px-8 xl:px-32 2xl:px-14">
+          <section className="mx-auto max-w-[1328px] space-y-10 px-6 lg:px-8 xl:px-32 2xl:px-14">
             <div className="stagger mx-auto max-w-3xl">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias reprehenderit totam, quasi quae libero assumenda eligendi laborum
               iure sunt voluptates itaque ducimus quos esse maiores dolores aut fugiat iste? Nisi, reprehenderit! Deserunt consequuntur nulla minus

@@ -162,9 +162,9 @@ const DealItem = ({ params }) => {
         </div>
       </Section>
       <Section>
-        <StaggerContainer selector=".stagger" viewportAmount={0.1} yOffset={50} duration={0.5} staggerChildren={0.12} delayChildren={0.1}>
+        <StaggerContainer selector=".stagger" viewportAmount={0.1} yOffset={50} duration={1.5} staggerChildren={0.15} delayChildren={0}>
           <h1 className="stagger mb-11 text-center text-2xl font-extrabold capitalize sm:text-3xl">About this deal</h1>
-          <section className="mx-auto max-w-[1328px] space-y-10 px-6 pb-20 lg:px-8 xl:px-32 2xl:px-14">
+          <section className="mx-auto max-w-[1328px] space-y-10 px-6 lg:px-8 xl:px-32 2xl:px-14">
             <div className="stagger mx-auto max-w-3xl">
               <h2 className="mb-3 text-2xl font-bold">Description</h2>
               <div>
@@ -200,9 +200,9 @@ const DealItem = ({ params }) => {
         </StaggerContainer>
       </Section>
       <Section>
-        <StaggerContainer selector=".stagger" viewportAmount={0.1} yOffset={50} duration={0.5} staggerChildren={0.12} delayChildren={0.1}>
+        <StaggerContainer selector=".stagger" viewportAmount={0.1} yOffset={50} duration={1.5} staggerChildren={0.15} delayChildren={0}>
           <h1 className="stagger mb-11 text-center text-2xl font-extrabold capitalize sm:text-3xl">Customer Reviews</h1>
-          <section className="mx-auto max-w-[1328px] px-6 pb-20 lg:px-8 xl:px-32 2xl:px-14 ">
+          <section className="mx-auto max-w-[1328px] px-6 lg:px-8 xl:px-32 2xl:px-14 ">
             <div className="stagger mx-auto mb-10 flex max-w-3xl items-center gap-4">
               <h2 className="text-5xl font-bold">{deal.rating}</h2>
               <RatingStars rating={deal.rating} className={"text-2xl"} />
