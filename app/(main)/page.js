@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       <Section>
-        <div className="mx-auto max-w-[1328px] px-5 pt-3 sm:px-6 lg:px-28 xl:px-32 2xl:px-0 3xl:max-w-screen-2xl">
+        <div className="mx-auto max-w-[1328px] px-5 pt-3 sm:px-6 lg:px-8 xl:px-32 2xl:px-0 3xl:max-w-screen-2xl">
           <div className="my-3 text-center sm:my-8">
             <p className="text-xl [word-spacing:3px] sm:text-2xl">So You Love Discounts</p>
             <p className="pt-2 text-3xl [word-spacing:3px] sm:text-4xl">We&apos;ve Got You Covered</p>
@@ -95,7 +95,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="mx-auto max-w-[1328px] px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
+        <div className="mx-auto max-w-[1328px] px-6 py-3 lg:px-8 xl:px-32 2xl:px-14">
           <div className="grid gap-x-6 gap-y-9 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
             {dealOfTheDay
               .map((item) => (
@@ -121,7 +121,7 @@ export default function Home() {
         <div className="mb-11 text-center capitalize">
           <h1 className="text-2xl font-extrabold sm:text-3xl">Deals Based On Category</h1>
         </div>
-        <section className="mx-auto max-w-[1328px] px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
+        <section className="mx-auto max-w-[1328px] px-6 py-3 lg:px-8 xl:px-32 2xl:px-14">
           {findAllRootCategories().map((rootCat) => (
             <CategoryCardCollection key={rootCat.id} rootCategory={rootCat} />
           ))}
@@ -187,7 +187,7 @@ export default function Home() {
         </div>
       </Section>
       <Section>
-        <div className="mx-auto mb-20 flex max-w-screen-2xl flex-col px-6 lg:min-h-[500px] lg:flex-row lg:px-28 xl:px-40">
+        <div className="mx-auto mb-20 flex max-w-screen-2xl flex-col px-6 lg:min-h-[500px] lg:flex-row lg:px-8 xl:px-40">
           <div className="relative h-80 overflow-hidden sm:h-96 lg:h-auto lg:basis-1/2">
             <div className=" absolute right-1/2 top-1/2 aspect-[1.38/1] w-[80%] max-w-sm -translate-y-1/2 translate-x-1/2 lg:left-[10%] lg:right-0 lg:max-w-none lg:translate-x-0">
               <Float className="relative h-full w-full">

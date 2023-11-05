@@ -46,7 +46,7 @@ const navigationLinkGroups = [
 const AccountInfoLayout = ({ children }) => {
   return (
     <Section>
-      <div className="mx-auto max-w-[1328px] px-6 pb-20 lg:px-28 xl:px-32 2xl:px-14">
+      <div className="mx-auto max-w-[1328px] px-6 pb-20 lg:px-8 xl:px-32 2xl:px-14">
         <StaggerContainer selector=".stagger" viewportAmount={0.1} repeat={true} yOffset={20} duration={0.5} staggerChildren={0.12} delayChildren={0}>
           <nav className="stagger mb-7 flex text-sm">
             {["Home", "Account"].map((breadcrumb, index, arr) => (

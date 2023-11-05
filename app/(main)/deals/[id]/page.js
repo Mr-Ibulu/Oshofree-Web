@@ -23,7 +23,7 @@ const DealItem = ({ params }) => {
   return (
     <>
       <Section>
-        <div className="mx-auto max-w-[1328px] px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
+        <div className="mx-auto max-w-[1328px] px-6 py-3 lg:px-8 xl:px-32 2xl:px-14">
           <SearchbarHeader />
           <StaggerContainer
             selector=".stagger"
@@ -62,7 +62,7 @@ const DealItem = ({ params }) => {
               </div>
             </div>
             <div className="flex flex-col gap-6 xl:flex-row">
-              <div className="stagger flex h-72 gap-4 sm:h-[400px] md:mb-8 lg:basis-[65%] 3xl:h-[500px]">
+              <div className="stagger flex h-72 gap-4 sm:h-[400px] md:mb-8 lg:basis-[65%] 3xl:h-[450px]">
                 <AutoScrollShowcase
                   horizontal={false}
                   className="flex h-[60%] w-20 flex-col gap-3 overflow-x-hidden overflow-y-scroll scrollbar-none"
@@ -134,7 +134,7 @@ const DealItem = ({ params }) => {
                   <span className="text-gray-500">(59 Ratings)</span>
                 </div>
               </div>
-              <div className="stagger md:mx-auto md:w-[90%] xl:basis-[35%]">
+              <div className="stagger shrink-0 md:mx-auto md:w-[90%] xl:basis-[35%]">
                 <DealActions dealItem={deal} />
                 <div className="mt-7 flex items-center justify-center gap-4 xl:px-5">
                   <span className="font-medium">Share This Deal:</span>
@@ -164,7 +164,7 @@ const DealItem = ({ params }) => {
       <Section>
         <StaggerContainer selector=".stagger" viewportAmount={0.1} yOffset={50} duration={0.5} staggerChildren={0.12} delayChildren={0.1}>
           <h1 className="stagger mb-11 text-center text-2xl font-extrabold capitalize sm:text-3xl">About this deal</h1>
-          <section className="mx-auto max-w-[1328px] space-y-10 px-6 pb-20 lg:px-28 xl:px-32 2xl:px-14">
+          <section className="mx-auto max-w-[1328px] space-y-10 px-6 pb-20 lg:px-8 xl:px-32 2xl:px-14">
             <div className="stagger mx-auto max-w-3xl">
               <h2 className="mb-3 text-2xl font-bold">Description</h2>
               <div>
@@ -202,7 +202,7 @@ const DealItem = ({ params }) => {
       <Section>
         <StaggerContainer selector=".stagger" viewportAmount={0.1} yOffset={50} duration={0.5} staggerChildren={0.12} delayChildren={0.1}>
           <h1 className="stagger mb-11 text-center text-2xl font-extrabold capitalize sm:text-3xl">Customer Reviews</h1>
-          <section className="mx-auto max-w-[1328px] px-6 pb-20 lg:px-28 xl:px-32 2xl:px-14 ">
+          <section className="mx-auto max-w-[1328px] px-6 pb-20 lg:px-8 xl:px-32 2xl:px-14 ">
             <div className="stagger mx-auto mb-10 flex max-w-3xl items-center gap-4">
               <h2 className="text-5xl font-bold">{deal.rating}</h2>
               <RatingStars rating={deal.rating} className={"text-2xl"} />
@@ -300,7 +300,7 @@ const DealItem = ({ params }) => {
         <div className="mb-11 text-center capitalize">
           <h1 className="text-2xl font-extrabold sm:text-3xl">Similar Deals</h1>
         </div>
-        <section className="mx-auto max-w-[1328px] px-6 pb-20 lg:px-28 xl:px-32 2xl:px-14">
+        <section className="mx-auto max-w-[1328px] px-6 pb-20 lg:px-8 xl:px-32 2xl:px-14">
           <div className="grid gap-x-6 gap-y-9 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
             {dealOfTheDay
               .map((item) => (

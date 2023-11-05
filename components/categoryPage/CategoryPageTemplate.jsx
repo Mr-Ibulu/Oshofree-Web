@@ -13,7 +13,7 @@ const CategoryPageTemplate = ({ category, results }) => {
   return (
     <>
       <Section>
-        <div className="mx-auto max-w-screen-xl px-6 pb-1 pt-3 lg:px-28 xl:px-32 2xl:px-0 3xl:max-w-[1400px]">
+        <div className="mx-auto max-w-screen-xl px-6 pb-1 pt-3 lg:px-8 xl:px-32 2xl:px-0 3xl:max-w-[1400px]">
           <SearchbarHeader />
           <StaggerContainer selector=".stagger" viewportAmount={0} repeat={true} yOffset={20} duration={1} staggerChildren={0.20} delayChildren={0}>
             <nav className="stagger mb-3 flex overflow-x-scroll text-xs scrollbar-none sm:mb-7 sm:text-sm">

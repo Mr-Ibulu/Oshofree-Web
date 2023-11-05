@@ -15,7 +15,7 @@ const Cart = () => {
   return (
     <>
       <Section>
-        <div className="mx-auto max-w-[1328px] px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
+        <div className="mx-auto max-w-[1328px] px-6 py-3 lg:px-8 xl:px-32 2xl:px-14">
           <StaggerContainer
             selector=".stagger"
             viewportAmount={0.1}
@@ -144,7 +144,7 @@ const Cart = () => {
         <div className="mb-11 text-center capitalize">
           <h1 className="text-2xl font-extrabold sm:text-3xl">You Might Also Like</h1>
         </div>
-        <section className="mx-auto max-w-[1328px] overflow-hidden px-6 py-3 lg:px-28 xl:px-32 2xl:px-14">
+        <section className="mx-auto max-w-[1328px] overflow-hidden px-6 py-3 lg:px-8 xl:px-32 2xl:px-14">
           <div className="grid gap-x-6 gap-y-9 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
             {dealOfTheDay
               .map((item) => (

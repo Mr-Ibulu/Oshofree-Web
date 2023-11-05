@@ -74,13 +74,13 @@ const DealActions = ({ dealItem }) => {
         </div>
       </RadioGroup>
       <div className="mt-10 space-y-4 xl:px-5">
-        <button className="w-full rounded-md border border-sky-700 bg-sky-700 py-2 font-semibold text-white hover:bg-sky-800 hover:text-white focus:outline-none">
+        <button className="w-full h-12 rounded-md border border-sky-700 bg-sky-700 py-2 font-semibold text-white hover:bg-sky-800 hover:text-white focus:outline-none">
           Buy Now
         </button>
-        <button className="w-full rounded-md border border-sky-700 py-2 font-semibold text-sky-700 hover:bg-sky-800 hover:text-white focus:outline-none">
+        <button className="w-full h-12 rounded-md border border-sky-700 py-2 font-semibold text-sky-700 hover:bg-sky-800 hover:text-white focus:outline-none">
           Add To Cart
         </button>
-        <button className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-sky-700 py-2 font-semibold text-sky-700 hover:bg-sky-800 hover:text-white focus:outline-none">
+        <button className="inline-flex w-full h-12 items-center justify-center gap-2 rounded-md border border-sky-700 py-2 font-semibold text-sky-700 hover:bg-sky-800 hover:text-white focus:outline-none">
           Save For Later <MdFavoriteBorder className="text-lg" />
         </button>
       </div>
