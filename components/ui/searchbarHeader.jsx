@@ -10,7 +10,7 @@ const SearchbarHeader = () => {
   const [locationPickerOpen, setLocationPickerOpen] = useState(false);
 
   return (
-    <div className="mx-auto mb-6 flex h-9 items-center gap-2 overflow-hidden rounded-full border-2 border-gray-300 bg-white px-4 font-medium sm:h-10 sm:w-[80%] xl:w-[70%] 2xl:w-[60%]">
+    <div className="mx-auto mb-6 flex h-10 items-center gap-2 overflow-hidden rounded-full border-2 border-gray-300 bg-white px-4 font-medium sm:h-10 sm:w-[80%] xl:w-[70%] 2xl:w-[60%]">
       <div className="w-5 text-2xl">
         <MdSearch />
       </div>
