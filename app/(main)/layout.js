@@ -19,7 +19,7 @@ const MainLayout = ({ children, auth }) => {
   return (
     <html lang="en" className={plusJakartaSans.className}>
       <body className="overflow-y-auto scroll-smooth subpixel-antialiased scrollbar-track-red-200 scrollbar-thumb-red-500 scrollbar-track-rounded-full scrollbar-thumb-rounded-full xl:scrollbar-thin">
-        <ParallexBackgroundImage />
+        {/* <ParallexBackgroundImage /> */}
         <Navbar />
         <main>
           {children}
