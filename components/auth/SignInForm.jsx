@@ -48,6 +48,7 @@ const SignInForm = () => {
               />
             </Form.Control>
             <button
+              type="button"
               className="absolute right-3 top-1/2 -translate-y-1/2 py-2 text-lg"
               onClick={(e) => {
                 e.preventDefault();
